@@ -278,16 +278,20 @@ h3.txt-2-bn-bot a:hover{
 
 /* start css footer*/
 .footer-t{
-	background-color: black;
+	background-color: #222;
 	height: auto;
-	padding: 30px;
+    padding: 30px;
+    font-family: 'Roboto', sans-serif;
 }
 .ft-left img{
 	max-height: 100px;
 }
 .ft-left p{
 	padding-bottom: 20px;
-	color: #fff;
+    color: #fff;
+    line-height: 1.7;
+    font-size: 15px;
+    color: #ccc;
 }
 .ft-main{
 	color: #fff;
@@ -984,3 +988,297 @@ strong,
         background-color: #fff;
         border: 1px solid #3B5999;
         }
+
+.lentop{
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #17b978a6;
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    cursor: pointer; 
+}
+.lentop i{
+    color: white;
+    font-size: 20px;
+}
+.lentop:hover{
+    background: #17b978;
+    transition: 0.3s;
+}
+.lentop:hover i{
+    color: white;
+    transition: 0.3s;   
+}
+
+
+/* Phổ biến */
+
+
+.navbar-brand.phobien{
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+.navbar-brand.phobien::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 6px;
+    height: 52px;
+    background-color: black;
+    opacity: 1;
+    left: 0px;
+    top: -1px;
+}
+.row.phobien ul{
+    list-style-type: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.row.phobien div.số{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #999;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+}
+.row.phobien a.noidung{
+    width: 310px;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.25;
+    font-weight: 500;
+    word-wrap: break-word;
+}
+.row.phobien a.noidung:hover{
+    color: #17b978;
+    transition: all 0.3s ease-in-out;
+}
+
+/* PostLeft */
+
+a.postleft img{
+    width: 100%;
+}
+a.postleft:hover{
+    opacity: 0.8;
+    transition: all 0.3s ease-in-out;
+}
+h5 a.postleft1{
+    font-size: 19px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.25;
+    font-weight: 500;
+}
+h5 a.postleft1:hover{
+    color: #17b978;
+    transition: all 0.3s ease-in-out;
+}
+span.tagtintuc{
+    font-size: 13.5px;
+    color: #888
+}
+span.tagtintuc a:hover{
+    color: #17b978;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* Giải trí */
+.navbar-text.right{
+    float: right!important;
+}
+.navbar-brand.giaitri{
+    color: #E71D69;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+.navbar-brand.giaitri::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 6px;
+    height: 52px;
+    background-color: #E71D69;
+    opacity: 1;
+    left: 0px;
+    top: -1px;
+}
+/* PostRight */
+a.postright{
+    width: 100px;
+    display: block;
+    margin-right: 15px;
+}
+a.postright img{
+    width: 100%;
+}
+a.postright:hover{
+    opacity: 0.8;
+    transition: all 0.3s ease-in-out;
+}
+h5 a.postright1{
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.25;
+    font-weight: 500;
+}
+h5 a.postright1:hover{
+    color: #17b978;
+    transition: all 0.3s ease-in-out;
+}
+.titlepostright{
+    width: 250px;
+    word-wrap: break-word;
+}
+
+/* Tags */
+.row.tags a.tags{
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 5px 20px 5px 20px;
+    margin: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #888;
+    border-color: #ccc;
+}
+.row.tags a.tags:hover{
+    color: #17b978;
+    transition: all 0.3s ease-in-out;
+    border-color: #17b978;
+}
+.row.tags .col-md-12{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Tài chính */
+.navbar-brand.taichinh{
+    color: #15a752;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+.navbar-brand.taichinh::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 6px;
+    height: 52px;
+    background-color: #15a752;
+    opacity: 1;
+    left: 0px;
+    top: -1px;
+}
+
+
+/* Du lich */
+.navbar-brand.dulich{
+    color: #e3724a;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+.navbar-brand.dulich::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 6px;
+    height: 52px;
+    background-color: #e3724a;
+    opacity: 1;
+    left: 0px;
+    top: -1px;
+}
+
+
+/* Tin mới nhất */
+.navbar-brand.tinmoinhat{
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+.navbar-brand.tinmoinhat::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 6px;
+    height: 52px;
+    background-color: black;
+    opacity: 1;
+    left: 0px;
+    top: -1px;
+}
+
+/* Nút playyoutube */
+button.nutplayyoutube{
+    color: #fff;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: 0 0;
+    border: none;
+    font-size: 40px
+}
+button.nutplayyoutube:hover{
+    color: #17b978;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* Đăng ký nhận tin */
+.col-md-12.dangkynhantin{
+    background-color: #17b978;
+    padding: 28px 35px 35px 35px;
+}
+.col-md-12.dangkynhantin h5{
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    line-height: 1.3;
+    color: #fff;
+    padding-bottom: 10px;
+}
+.col-md-12.dangkynhantin p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #fff;
+    padding-bottom: 25px;
+}
+.col-md-12.dangkynhantin form.dangkynhantin{
+    width: 100%;
+    height: 60px;
+}
+.col-md-12.dangkynhantin input.dangkynhantin{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1.333333;
+    width: 100%;
+    height: 100%;
+    padding-left: 20px
+}
+button.dangkynhantin{
+    color: #999;
+    right: 0;
+    top: 0;
+    width: 55px;
+    height: 100%;
+    position: absolute;
+    background: 0 0;
+    border: none;
+    font-size: 16px
+}
+button.dangkynhantin:hover{
+    color: #17b978;
+    transition: all 0.3s ease-in-out;
+}
