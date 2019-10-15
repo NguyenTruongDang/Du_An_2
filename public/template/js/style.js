@@ -22,3 +22,11 @@ $(document).ready(function () {
         $('.login-container').fadeIn();
     });
 });
+
+// Lên top
+$(document).ready(function () {
+    $('.lentop').click(function (e) {
+      e.preventDefault();
+      $('body,html').animate({ scrollTop: 0 }, 2000, 'easeOutQuad')
+    });
+  });
