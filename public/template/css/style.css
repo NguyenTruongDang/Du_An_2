@@ -1282,3 +1282,238 @@ button.dangkynhantin:hover{
     color: #17b978;
     transition: all 0.3s ease-in-out;
 }
+
+
+
+/* start css trang new */
+.entertaiment h1{
+    font-size: 30px;
+    font-weight: bold;
+}
+.entertaiment{
+    padding: 20px 0px;
+}
+.banner-new-left{
+    background-image: url(../img/entertaiment1.jpg);
+    min-height: 430px;
+    position: relative;
+    display: block;
+    background-size: cover;
+
+}
+.banner-new-left p{
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    font-size: 15px;
+    color: #fff;
+    border: 1px solid #fff;
+}
+.banner-new-left h3{
+    position: absolute;
+    top: 70%;
+    left: 5%;
+    font-size: 30px;
+    color: #fff;
+}
+.banner-new-left p:hover{
+    color: #478bca;
+}
+.banner-new-left h3:hover{
+    color: #478bca;
+}
+.banner-new-right{
+    background-image: url(../img/entertaiment2.jpg);
+    min-height: 210px;
+    position: relative;
+    display: block;
+    background-size: cover;
+    margin-bottom: 10px;
+    overflow: hidden;
+    width: 100%;
+}
+.banner-new-right p{
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    font-size: 15px;
+    color: #fff;
+    border: 1px solid #fff;
+}
+.banner-new-right h3{
+    position: absolute;
+    top: 70%;
+    left: 5%;
+    font-size: 30px;
+    color: #fff;
+}
+.bangtin{
+    padding: 30px 0px;
+}
+.item-tintuc{
+    padding-bottom: 50px;
+}
+.item-tintuc img{
+    max-width: 100%;
+
+}
+.txt-tintuc p{
+    font-size: 15px;
+}
+.txt-tintuc h3{
+    font-size: 25px;
+    font-weight: bold;
+
+}
+
+/*  end css new*/
+
+
+/* start css chi tiet */
+.txt-chitiet{
+    padding: 30px 0px 80px 0px;
+}
+.tieude-chitiet{
+
+}
+.img-chitiet{
+
+}
+.tieude-chitiet h1{
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+.tieude-chitiet p{
+    font-size: 20px;
+    padding-bottom: 30px;
+    
+}
+.img-chitiet{
+    padding-bottom: 30px;
+}
+.img-chitiet img{
+    width: 100%;
+}
+.baiviet-chitiet{
+    height: auto;
+    padding-bottom: 30px;
+}
+.baiviet-chitiet p{
+    font-size: 18px;
+}
+.tags{
+    padding-bottom: 20px;
+}
+.tags span.txt-tag{
+    font-size: 20px;
+}
+.tags span.txt-tag a{
+    margin:0px 5px;
+}
+.share{
+    padding-bottom: 100px;
+}
+.txt-share{
+    float: left;
+    padding: 10px 10px;
+}
+.btn-share{
+    float: left;
+    margin: 10px 5px;
+}
+.btn-share a{
+    color: #fff;
+    font-size: 15px;
+    padding: 5px 10px;
+}
+.btn-share a.color1{
+    background-color: #3b5998;
+}
+.btn-share a.color2{
+    background-color: #1da1f2;
+}
+.btn-share a.color3{
+    background-color: #dd4b39;
+}
+.btn-share a.color4{
+    background-color: #bd081c;
+}
+.btn-share a i{
+    margin-right: 10px;
+}
+.all-ip input[type="text"]{
+    border: 1px solid #e3e3e3;
+    padding-left: 20px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+
+}
+.tieude-comment{
+    padding-bottom: 30px;
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+}
+.ip-comment input[type="text"]{
+    width: 100%;
+    height: 120px;
+}
+.ip-name input[type="text"]{
+    width: 40%;
+    height: 50px;
+}
+.ip-email input[type="text"]{
+    width: 40%;
+    height: 50px;
+}
+.ip-website input[type="text"]{
+    width: 40%;
+    height: 50px;
+}
+.btn-comment button{
+    width: 30%;
+    height: 40px;
+    background-color: black;
+    color: #fff;
+    border-radius: 3px;
+    border:none;
+}
+.ul-cate{
+    padding: 50px 0px;
+}
+.ul-cate ul{
+
+}
+.ul-cate ul li{
+    list-style: none;
+    padding-bottom: 13px;
+    padding-top: 13px;
+    border-bottom: 1px solid #e7e7e7;
+    border-top: 1px solid #e7e7e7;
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+
+}
+.ul-cate ul li a{
+    text-decoration: none;
+
+}
+.ul-archive{
+    padding-bottom: 50px;
+}
+.ul-archive ul{
+
+}
+.ul-archive ul li{
+    list-style: none;
+     padding-bottom: 13px;
+    padding-top: 13px;
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.ul-archive ul li a{
+    text-decoration: none;
+}
