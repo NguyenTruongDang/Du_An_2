@@ -1299,6 +1299,7 @@ button.dangkynhantin:hover{
     position: relative;
     display: block;
     background-size: cover;
+    font-family: 'Roboto', sans-serif;
 
 }
 .banner-new-left p{
@@ -1309,6 +1310,11 @@ button.dangkynhantin:hover{
     color: #fff;
     border: 1px solid #fff;
 }
+.banner-new-left p a:hover{
+    color: #17b978;
+    transition: 0.3s all ease-in-out;
+}
+
 .banner-new-left h3{
     position: absolute;
     top: 70%;
@@ -1316,12 +1322,11 @@ button.dangkynhantin:hover{
     font-size: 30px;
     color: #fff;
 }
-.banner-new-left p:hover{
-    color: #478bca;
+.banner-new-left h3 a:hover{
+    color: #17b978;
+    transition: 0.3s all ease-in-out;
 }
-.banner-new-left h3:hover{
-    color: #478bca;
-}
+
 .banner-new-right{
     background-image: url(../img/entertaiment2.jpg);
     min-height: 210px;
@@ -1331,39 +1336,61 @@ button.dangkynhantin:hover{
     margin-bottom: 10px;
     overflow: hidden;
     width: 100%;
+    font-family: 'Roboto', sans-serif;
 }
 .banner-new-right p{
     position: absolute;
     top: 60%;
     left: 5%;
-    font-size: 15px;
+    font-size: 12px;
     color: #fff;
     border: 1px solid #fff;
+}
+.banner-new-right p a:hover{
+    color: #17b978;
+    transition: 0.3s all ease-in-out;
 }
 .banner-new-right h3{
     position: absolute;
     top: 70%;
     left: 5%;
-    font-size: 30px;
+    font-size: 19px;
     color: #fff;
+}
+.banner-new-right h3 a:hover{
+    color: #17b978;
+    transition: 0.3s all ease-in-out;
 }
 .bangtin{
     padding: 30px 0px;
 }
 .item-tintuc{
     padding-bottom: 50px;
+    font-family: 'Roboto', sans-serif;
 }
 .item-tintuc img{
     max-width: 100%;
 
 }
-.txt-tintuc p{
+.item-tintuc a img:hover{
+    filter: brightness(1.3);
+    transition: 0.3s all ease-in-out;
+}
+.txt-tintuc a.textnote{
     font-size: 15px;
 }
+.txt-tintuc a.textnote:hover{
+    color: #17b978;
+    transition: 0.3s all ease-in-out;
+}
+
 .txt-tintuc h3{
     font-size: 25px;
     font-weight: bold;
-
+}
+.txt-tintuc h3:hover{
+    color: #17b978;
+    transition: 0.3s all ease-in-out;
 }
 
 /*  end css new*/
@@ -1381,13 +1408,19 @@ button.dangkynhantin:hover{
 }
 .tieude-chitiet h1{
     font-size: 30px;
-    font-weight: bold;
+    font-weight: 500;
+    color: black;
     padding-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
 }
 .tieude-chitiet p{
-    font-size: 20px;
+    font-size: 14px;
     padding-bottom: 30px;
-    
+    font-family: 'Roboto', sans-serif;
+}
+.tieude-chitiet p a:hover{
+    color: #17b978;
+    transition: all 0.3s ease-in-out;
 }
 .img-chitiet{
     padding-bottom: 30px;
@@ -1400,44 +1433,71 @@ button.dangkynhantin:hover{
     padding-bottom: 30px;
 }
 .baiviet-chitiet p{
-    font-size: 18px;
+    font-size: 16.5px;
+    line-height: 1.6;
+    color: #666;
+    font-family: 'Roboto', sans-serif;
 }
 .tags{
     padding-bottom: 20px;
 }
 .tags span.txt-tag{
-    font-size: 20px;
+    
+    font-family: 'Roboto', sans-serif;
 }
 .tags span.txt-tag a{
     margin:0px 5px;
+    font-size: 17px;
+    
+}
+.tags span.txt-tag a:hover{
+    color: #17b978;
+    
 }
 .share{
     padding-bottom: 100px;
 }
 .txt-share{
     float: left;
-    padding: 10px 10px;
+    font-family: 'Roboto', sans-serif;
 }
 .btn-share{
     float: left;
-    margin: 10px 5px;
+    margin: 0px 5px;
 }
 .btn-share a{
     color: #fff;
-    font-size: 15px;
+    font-size: 14px;
     padding: 5px 10px;
+    font-family: 'Roboto', sans-serif;
 }
 .btn-share a.color1{
     background-color: #3b5998;
 }
+.btn-share a.color1:hover{
+    background-color: #17b978;
+    transition: 0.3s all ease-in-out;
+}
 .btn-share a.color2{
     background-color: #1da1f2;
+}
+.btn-share a.color2:hover{
+    background-color: #17b978;
+    transition: 0.3s all ease-in-out;
 }
 .btn-share a.color3{
     background-color: #dd4b39;
 }
+.btn-share a.color3:hover{
+    background-color: #17b978;
+    transition: 0.3s all ease-in-out;
+}
 .btn-share a.color4{
     background-color: #bd081c;
+}
+.btn-share a.color4:hover{
+    background-color: #17b978;
+    transition: 0.3s all ease-in-out;
 }
 .btn-share a i{
     margin-right: 10px;
@@ -1448,6 +1508,9 @@ button.dangkynhantin:hover{
     border-radius: 5px;
     margin-bottom: 25px;
 
+}
+.comment{
+    font-family: 'Roboto', sans-serif;
 }
 .tieude-comment{
     padding-bottom: 30px;
@@ -1479,6 +1542,10 @@ button.dangkynhantin:hover{
     border-radius: 3px;
     border:none;
 }
+.btn-comment button:hover{
+    background-color: #17b978;
+    transition: 0.3s all ease-in-out;
+}
 .ul-cate{
     padding: 50px 0px;
 }
@@ -1500,6 +1567,11 @@ button.dangkynhantin:hover{
     text-decoration: none;
 
 }
+.ul-cate ul li a:hover{
+    color: #17b978;
+    transition: 0.2s all ease-in-out;
+
+}
 .ul-archive{
     padding-bottom: 50px;
 }
@@ -1516,4 +1588,9 @@ button.dangkynhantin:hover{
 }
 .ul-archive ul li a{
     text-decoration: none;
+}
+.ul-archive ul li a:hover{
+    color: #17b978;
+    transition: 0.2s all ease-in-out;
+
 }
