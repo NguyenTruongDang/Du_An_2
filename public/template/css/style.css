@@ -1093,15 +1093,15 @@ span.tagtintuc a:hover{
 
 
 /* Giải trí */
-.navbar-text.right{
+.theloai1 .navbar-text.right{
     float: right!important;
 }
-.navbar-brand.giaitri{
+.theloai1 .navbar-brand.giaitri{
     color: #E71D69;
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
 }
-.navbar-brand.giaitri::before{
+.theloai1 .navbar-brand.giaitri::before{
     content: "";
     display: block;
     position: absolute;
@@ -1163,12 +1163,12 @@ h5 a.postright1:hover{
 }
 
 /* Tài chính */
-.navbar-brand.taichinh{
+.theloai2 .navbar-brand.taichinh{
     color: #15a752;
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
 }
-.navbar-brand.taichinh::before{
+.theloai2 .navbar-brand.taichinh::before{
     content: "";
     display: block;
     position: absolute;
@@ -1182,12 +1182,12 @@ h5 a.postright1:hover{
 
 
 /* Du lich */
-.navbar-brand.dulich{
+.theloai3 .navbar-brand.dulich{
     color: #e3724a;
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
 }
-.navbar-brand.dulich::before{
+.theloai3 .navbar-brand.dulich::before{
     content: "";
     display: block;
     position: absolute;
@@ -1201,12 +1201,12 @@ h5 a.postright1:hover{
 
 
 /* Tin mới nhất */
-.navbar-brand.tinmoinhat{
+.tinmoinhat .navbar-brand.tinmoinhat{
     color: black;
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
 }
-.navbar-brand.tinmoinhat::before{
+.tinmoinhat .navbar-brand.tinmoinhat::before{
     content: "";
     display: block;
     position: absolute;
