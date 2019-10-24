@@ -1,0 +1,92 @@
+<?php require_once "DBConnect.php"; 
+
+class adminModel extends DBConnect{
+	// Hàm lấy dữ liệu
+	function selectTable($tb){
+		$sql = "SELECT * 
+				FROM $tb
+
+		";
+		return $this->getMoreRows($sql);
+	}
+	// Hàm lấy dữ liệu thông qua id
+	function selectTableById($tb,$id){
+		$sql = "SELECT * 
+				FROM $tb 
+				WHERE id = $id
+		";
+		return $this->getOneRow($sql);
+	}
+	// hàm lấy dữ liệu tin tức + thể loại 
+	function selectNews(){
+		$sql = "SELECT *, tt.id as idNews, tl.id as idType
+				FROM tintuc as tt
+				INNER JOIN theloai as tl ON id_type = tl.id
+
+		";
+		return $this->getMoreRows($sql);
+	}
+	// Hàm thêm dữ liệu tin tức 
+	function insertNews($idtype,$iduser,$imgname,$alt_img,$title,$titleko,$ndesc,$content,$tags,$title_seo,$ndesc_seo,$key_seo,$status,$show){
+		$sql = "INSERT INTO tintuc
+				(id_type,id_user,ava_img,alt_img,tieude,tieude_ko,mota,noidung,tags,title_seo,desc_seo,key_seo,dacbiet,hienthi)
+				VALUES 
+				($idtype,$iduser,'$imgname','$alt_img','$title','$titleko','$ndesc','$content','$tags','$title_seo','$ndesc_seo','$key_seo',$status,$show)
+				
+		";
+		return $this->executeQuery($sql);
+	}
+	// Hàm thêm dữ liệu thể loại
+	function insertType($tentl,$tentl_ko,$menu,$home,$title_seo,$desc_seo,$key_seo){
+		$sql = "INSERT INTO theloai
+				(tentl,tentl_ko,menu,home,title_seo,desc_seo,key_seo)
+				VALUES
+				('$tentl','$tentl_ko',$menu,$home,'$title_seo','$desc_seo','$key_seo')
+		";
+		return $this->executeQuery($sql);
+	}
+	// Hàm sửa dữ liệu tin tức
+	function updateNews($imgname,$alt_img,$title,$titleko,$ndesc,$content,$tags,$title_seo,$ndesc_seo,$key_seo,$status,$show,$id){
+		$sql = "UPDATE tintuc 
+				SET 
+					ava_img = '$imgname',
+					alt_img = '$alt_img', 
+					tieude = '$title',
+					tieude_ko = '$titleko', 
+					mota = '$ndesc', 
+					noidung = '$content', 
+					tags = '$tags', 
+					title_seo = '$title_seo', 
+					desc_seo = '$ndesc_seo', 
+					key_seo = '$key_seo', 
+					dacbiet = $status,
+					hienthi = $show
+				WHERE id = $id
+
+		";
+		return $this->executeQuery($sql);
+	}
+	// Hàm sửa dữ liệu thể loại
+	function updateType($tentl,$tentl_ko,$menu,$home,$title_seo,$desc_seo,$key_seo,$id){
+		$sql = "UPDATE theloai
+				SET tentl = '$tentl',
+					tentl_ko = '$tentl_ko',
+					home = $home,
+					menu = $menu,
+					title_seo = '$title_seo', 
+					desc_seo = '$desc_seo', 
+					key_seo = '$key_seo'
+				WHERE id = $id
+		";
+		return $this->executeQuery($sql);
+	}
+		// Hàm xóa bảng theo id
+	function delete($tb,$id){
+		$sql = "DELETE FROM $tb 
+				WHERE id = $id
+		";
+		return $this->executeQuery($sql);
+	}
+}
+
+?>
