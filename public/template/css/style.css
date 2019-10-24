@@ -1594,3 +1594,91 @@ button.dangkynhantin:hover{
     transition: 0.2s all ease-in-out;
 
 }
+
+
+
+/* css proview */
+.all-proview{
+    background-color: #17b978;
+    padding: 50px 0px;
+    font-family: 'Roboto', sans-serif;
+}
+.proview-bg{
+    background-color: #fff;
+    padding: 30px 30px;
+}
+.img-proview img{
+    max-width: 100%;
+}
+.word-link{
+    padding: 10px 5px;
+}
+.word-link a{
+    display: block;
+    margin-bottom: 8px;
+    text-decoration: none;
+    font-size: 18px;
+}
+.word-link a:hover{
+    color: #17b978;
+}
+.skills a:hover{
+    color: #17b978;
+}
+}
+.skills{
+    padding: 10px 5px;
+}
+.skills a{
+    display: block;
+    margin-bottom: 8px;
+    text-decoration: none;
+    font-size: 18px;
+}
+.skills h5{
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #736c6c;
+    font-weight: bold;
+}
+.word-link h5{
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #736c6c;
+    font-weight: bold;
+}
+.txt-proview a{
+    float: right;
+    font-weight: 20px;
+    color: #6c757d;
+    background-color: #d4dae0;
+    padding: 10px 30px;
+    border-radius: 8px;
+}
+.txt-proview h1{
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+.txt-proview h2{
+    font-size: 18px;
+    color: blue;
+    margin-bottom: 15px;
+}
+.txt-proview h3{
+    font-size: 12px;
+}
+.bot-proview{
+    padding: 40px 0px;
+    color: #17b978;
+}
+.bot-proview a{
+    font-size: 20px;
+    margin-right: 30px;
+}
+.thongtin-prorive{
+    padding: 30px 0px;
+    font-size: 18px;
+}
+p.thongtin-txt {
+    color: #17b978;
+}

@@ -1,3 +1,5 @@
+
+// Ẩn hiện đăng ký đăng nhập
 $(document).ready(function () {
     $('.signup-container').hide();
     $('.login-container').hide();
@@ -23,10 +25,17 @@ $(document).ready(function () {
     });
 });
 
-// Lên top
+// Ẩn hiện about, timeline
 $(document).ready(function () {
-    $('.lentop').click(function (e) {
-      e.preventDefault();
-      $('body,html').animate({ scrollTop: 0 }, 2000, 'easeOutQuad')
+    $('.all-timeline').hide();
+    $('#chuyenabout').css("color", "#23527c");
+    $('#chuyentimeline').click(function () {
+        $('.all-timeline').fadeIn('slow');
+        $('.all-about').hide('slow');
+        $('#chuyenabout').css("color", "");
     });
-  });
+    $('#chuyenabout').click(function () {
+        $('.all-timeline').fadeOut('slow');
+        $('.all-about').show('slow');
+    });
+});
