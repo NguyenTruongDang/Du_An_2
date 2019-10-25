@@ -1,5 +1,6 @@
 
 <?php 
+session_start();
 require_once "model/newsModel.php";
 require_once "helper/functions.php";
 $model = new newsModel;
@@ -32,9 +33,7 @@ if(isset($_SESSION['re_mail'])){
 
     }
 ?>
-<?php 
-session_start();
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -1,4 +1,5 @@
 <?php 
+session_start();
 require_once "model/newsModel.php";
 
 if(isset($_GET['token'])){
@@ -38,9 +39,7 @@ if(isset($_POST['gm'])){
 
 
 ?>
-<?php 
-session_start();
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

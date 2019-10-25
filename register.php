@@ -1,4 +1,5 @@
 <?php 
+session_start();
 require_once "model/newsModel.php";
 require_once "helper/PHPMailer/sendmail.php";
 require_once "helper/functions.php";

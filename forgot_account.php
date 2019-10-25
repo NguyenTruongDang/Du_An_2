@@ -1,4 +1,5 @@
 <?php 
+session_start();
 require_once "model/newsModel.php";
 require_once "helper/PHPMailer/sendmail.php";
 $model = new newsModel;
@@ -23,9 +24,7 @@ if(isset($_POST['c'])){
 }
 
 ?>
-<?php 
-session_start();
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

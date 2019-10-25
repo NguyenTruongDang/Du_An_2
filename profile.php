@@ -1,4 +1,6 @@
-<?php require_once "view/header.php"; 
+<?php
+session_start();
+require_once "view/header.php"; 
 if(!isset($_SESSION['tokenid'])){
 	header('location:trang-chu');
 }

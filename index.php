@@ -1,4 +1,5 @@
 <?php 
+session_start();
 require_once "controller/newsController.php";
 require_once "model/newsModel.php";
 $ctrl = new newsController;
@@ -9,9 +10,7 @@ $new = $data['new'];
 $home = $data['home'];
 $view = $data['view'];
 ?>
-<?php 
-session_start();
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
