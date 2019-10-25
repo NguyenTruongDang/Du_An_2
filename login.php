@@ -9,7 +9,7 @@ if(isset($_POST['sm'])){
     if($data){
         $_SESSION['tokenid'] = $data->token;
         $_SESSION['nameu']=$data->ten;
-        header('location:profile.php');
+        header("location:ca-nhan");
         return;
     }
     else{

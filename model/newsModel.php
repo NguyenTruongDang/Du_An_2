@@ -43,9 +43,9 @@ class newsModel extends DBConnect{
 		return $this->getOneRow($sql);
 	}
 	//Hàm đăng kí 
-	function register($token,$name,$mail,$pass){
-		$sql = "INSERT INTO nguoidung(token,ten,mail,mat_khau) 
-				VALUES('$token','$name','$mail','$pass')
+	function register($token,$name,$nameko,$mail,$pass){
+		$sql = "INSERT INTO nguoidung(token,ten,ten_ko,mail,mat_khau) 
+				VALUES('$token','$name','$nameko','$mail','$pass')
 		";
 		return $this->executeQuery($sql);
 	}
@@ -142,6 +142,14 @@ class newsModel extends DBConnect{
 				LIMIT 0,8
 		";
 		return $this->getMoreRows($sql);
+	}
+	// Hàm lấy thông tin người dùng thông qua token
+	function getProfile($token){
+		$sql = "SELECT * 
+				FROM nguoidung
+				WHERE token = '$token'
+		";
+		return $this->getOneRow($sql);
 	}
 
 }
