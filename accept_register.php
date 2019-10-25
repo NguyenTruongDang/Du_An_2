@@ -1,6 +1,7 @@
 
 <?php 
 session_start();
+require_once "admin/helper/VitoEn.php";
 require_once "model/newsModel.php";
 require_once "helper/functions.php";
 $model = new newsModel;
@@ -12,9 +13,10 @@ if(isset($_SESSION['re_mail'])){
             $name = $_SESSION['re_name'];
             $mail = $_SESSION['re_mail'];
             $pass = $_SESSION['re_pass'];
+            $nameko = convert_vi_to_en($name);
             $token = createToken(50);
 
-            $a =$model->register($token,$name,$mail,$pass);
+            $a =$model->register($token,$name,$nameko,$mail,$pass);
             if($a){
                 session_destroy();
                 header('location:login.php');

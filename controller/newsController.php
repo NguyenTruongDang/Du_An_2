@@ -52,6 +52,17 @@ class newsController{
 			'news' => $news
 		);
 	}
+	// Xử lí trang cá nhân
+	public function profile(){
+		$model = new newsModel;
+		if($_SESSION['tokenid']){
+			$token = $_SESSION['tokenid'];
+			$pro = $model->getProfile($token);
+		}
+		return array(
+			'pro' => $pro,
+		);
+	}
 
 }
 ?>

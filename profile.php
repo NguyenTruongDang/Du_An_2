@@ -1,9 +1,13 @@
 <?php
 session_start();
 require_once "view/header.php"; 
+require_once "controller/newsController.php";
 if(!isset($_SESSION['tokenid'])){
 	header('location:trang-chu');
 }
+$ctrl = new newsController;
+$data = $ctrl->profile();
+$pro = $data['pro'];
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +27,6 @@ if(!isset($_SESSION['tokenid'])){
     <script src="public/template/js/popper.min.js"></script>
     <script src="public/template/js/bootstrap.min.js"></script>
     <script src="public/template/js/style.js"></script>
-
 
 </head>
 <?php require_once "view/header.php"; ?>
@@ -59,10 +62,10 @@ if(!isset($_SESSION['tokenid'])){
 							<div class="col-md-8 col-sm-12">
 								<div class="right-proview">
 									<div class="txt-proview">
-										<a href="#">EIT</a>
-										<h1>Kshiti Ghelani</h1>
+										<a href="logout.php">EIT</a>
+										<h1><?=$pro->ten?></h1>
 										<h2>Web Developer and Designer</h2>
-										<h3>RANKINGS : 8/10</h3>
+										<h3>Ngày tham gia : <?=$pro->ngay_tao?></h3>
 									</div>
 									<div class="bot-proview">
 										<a href="#home" id="chuyenabout">About</a>
