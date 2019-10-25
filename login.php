@@ -1,4 +1,5 @@
 <?php 
+session_start();
 require_once "model/newsModel.php";
 $model = new newsModel;
 if(isset($_POST['sm'])){
@@ -18,9 +19,7 @@ if(isset($_POST['sm'])){
 
 
 ?>
-<?php 
-session_start();
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
