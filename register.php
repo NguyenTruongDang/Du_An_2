@@ -5,10 +5,6 @@ require_once "helper/PHPMailer/sendmail.php";
 require_once "helper/functions.php";
 $model = new newsModel;
 
-
-
-
-
 if(isset($_POST['sm'])){
     $error = array();
     if(empty($_POST['name'])) $error[]='name'; else $_SESSION['re_name'] = $_POST['name'];
@@ -45,8 +41,6 @@ if(isset($_POST['sm'])){
         }
     }
     
-
-
 }
 
 ?>
@@ -114,8 +108,6 @@ if(isset($_POST['sm'])){
                 <div class="col-md-4"></div>
             </div>
             </form>
-
-
     </div>
   
    </div>
