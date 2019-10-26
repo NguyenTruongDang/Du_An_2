@@ -1,5 +1,7 @@
 
-<?php require_once "view/header.php" ;
+<?php 
+session_start();
+require_once "admin/helper/VitoEn.php";
 require_once "model/newsModel.php";
 require_once "helper/functions.php";
 $model = new newsModel;
@@ -11,9 +13,10 @@ if(isset($_SESSION['re_mail'])){
             $name = $_SESSION['re_name'];
             $mail = $_SESSION['re_mail'];
             $pass = $_SESSION['re_pass'];
+            $nameko = convert_vi_to_en($name);
             $token = createToken(50);
 
-            $a =$model->register($token,$name,$mail,$pass);
+            $a =$model->register($token,$name,$nameko,$mail,$pass);
             if($a){
                 session_destroy();
                 header('location:login.php');
@@ -32,6 +35,28 @@ if(isset($_SESSION['re_mail'])){
 
     }
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="public/template/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="public/template/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="public/template/css/style.css">
+    <link rel="stylesheet" type="text/css" href="public/template/css/animate.min.css" <link rel="stylesheet" type="text/css"
+        href="public/template/css/responsive.css">
+    <script src="public/template/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="public/template/js/popper.min.js"></script>
+    <script src="public/template/js/bootstrap.min.js"></script>
+    <script src="public/template/js/style.js"></script>
+
+
+</head>
+<?php require_once "view/header.php"; ?>
 <div class="container">
 
 <nav aria-label="breadcrumb">

@@ -1,29 +1,9 @@
 <?php 
-session_start();
+require_once "model/newsModel.php";
+$model = new newsModel;
+$type = $model->selectT();
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
-	<link rel="stylesheet" type="text/css" href="public/template/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="public/template/css/slick.css">
-	<link rel="stylesheet" type="text/css" href="public/template/css/style.css">
-	<link rel="stylesheet" type="text/css" href="public/template/css/responsive.css">
-	<script src="public/template/js/jquery-3.3.1.slim.min.js"></script>
-	<script src="public/template/js/popper.min.js"></script>
-	<script src="public/template/js/bootstrap.min.js"></script>
-	<script src="public/template/js/style.js"></script>
-
-
-</head>
-
-<body>
-	
+<body>	
 	<header id="header">
 		<div class="hd-top">
 			<div class="container-fluid">
@@ -31,11 +11,19 @@ session_start();
 					<div class="all-top">
 						<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
 							<div class="left-top">
-								<span class="days-time">
-									Việt Nam, 04/10/2019 - 14h08p
-								</span>
-								<a class="left-li" href="#">About</a>
-								<a class="left-li" href="#">Contact</a>
+								<span class="days-time">	
+								Hà Nội,
+								<?php
+
+		                            date_default_timezone_set('Asia/Ho_Chi_Minh');
+		                            $date = getdate();
+		                            
+		                            echo "  Ngày ".$date['mday']." Tháng ".$date['mon']." Năm ".$date['year'];
+		                        ?>
+                       			 </span>
+								
+								<a class="left-li" href="trang-chu">Giới thiệu</a>
+								<a class="left-li" href="trang-chu">Liên hệ</a>
 								<?php if(isset($_SESSION['tokenid'])): ?>
 								<a class="left-li"  href="profile.php"><?=$_SESSION['nameu']?></a>
 								<?php else: ?>
@@ -46,11 +34,11 @@ session_start();
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 							<div class="right-top">
-								<a class="icon-right" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-								<a class="icon-right" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-								<a class="icon-right" href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-								<a class="icon-right" href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a>
-								<a class="icon-right" href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+								<a class="icon-right" href="trang-chu"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+								<a class="icon-right" href="trang-chu"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+								<a class="icon-right" href="trang-chu"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+								<a class="icon-right" href="trang-chu"><i class="fa fa-vimeo" aria-hidden="true"></i></a>
+								<a class="icon-right" href="trang-chu"><i class="fa fa-youtube" aria-hidden="true"></i></a>
 							</div>
 						</div>
 					</div>
@@ -61,14 +49,14 @@ session_start();
 			<div class="container">
 				<div class="col-lg-4 col-md-4 col-xs-4 col-sm-4">
 					<div class="logo">
-						<a href="#">
+						<a href="trang-chu">
 							<img src="public/template/img/logo.png">
 						</a>
 					</div>
 				</div>
 				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
 					<div class="banner">
-						<a href="#">
+						<a href="trang-chu">
 							<img src="public/template/img/banner-01.png">
 						</a>
 					</div>
@@ -83,25 +71,18 @@ session_start();
 				<nav class="nav-wrap" id="main-nav">
 					<div class="nav-overlay"></div>
 					<ul class="nav-ul">
-						<li><a href="index.html">Trang chủ</a>
+						<li><a href="trang-chu">Trang chủ</a>
 						</li>
-						<li><a href="about.html">Giải trí</a>
+						<?php foreach($type as $t): ?>
+						<li><a href="<?=$t->tentl_ko?>"><?=$t->tentl?></a>
 						</li>
-						<li><a href="our_product.html">Kinh doanh</a>
-						</li>
-						<li><a href="cerfiticate.html">Pháp luật</a>
-						</li>
-						<li><a href="new.html">Thể thao</a>
-						</li>
-						<li><a href="contactus.html">Đời sống</a>
-						</li>
-						<li><a href="contactus.html">Sức khỏe</a>
-						</li>
-						<li class="dropdown "><a href="#">Video</a>
+						<?php endforeach ?>
+
+						<li class="dropdown "><a href="trang-chu">Video</a>
 							<div class="sub-menu-wrap">
 								<ul class="sub-menu">
-									<li><a href="#">Video giải trí</a></li>
-									<li><a href="#">Video tin tức</a></li>
+									<li><a href="trang-chu">Video giải trí</a></li>
+									<li><a href="trang-chu">Video tin tức</a></li>
 								</ul>
 							</div>
 						</li>
