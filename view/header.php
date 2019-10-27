@@ -25,7 +25,7 @@ $type = $model->selectT();
 								<a class="left-li" href="trang-chu">Giới thiệu</a>
 								<a class="left-li" href="trang-chu">Liên hệ</a>
 								<?php if(isset($_SESSION['tokenid'])): ?>
-								<a class="left-li"  href="profile.php"><?=$_SESSION['nameu']?></a>
+								<a class="left-li"  href="ca-nhan"><?=$_SESSION['nameu']?></a>
 								<?php else: ?>
 								<a class="left-li" id="dangnhap" href="login.php">Đăng nhập</a>
 								<a class="left-li" id="dangky" href="register.php">Đăng ký tài khoản</a>
