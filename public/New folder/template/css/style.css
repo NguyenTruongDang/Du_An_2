@@ -1097,7 +1097,7 @@ span.tagtintuc a:hover{
     float: right!important;
 }
 .theloai1 .navbar-brand.giaitri{
-    color: #17b978;
+    color: #E71D69;
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
 }
@@ -1107,7 +1107,7 @@ span.tagtintuc a:hover{
     position: absolute;
     width: 6px;
     height: 52px;
-    background-color: #17b978;
+    background-color: #E71D69;
     opacity: 1;
     left: 0px;
     top: -1px;
@@ -1607,8 +1607,46 @@ button.dangkynhantin:hover{
     background-color: #fff;
     padding: 30px 30px;
 }
+.img-proview{
+    border-radius: 0%;
+    position: relative;
+    min-height: 150px;
+    background-color: #e6e6e6;
+}
 .img-proview img{
-    max-width: 100%;
+    width: 100%;
+}
+.img-proview h4{
+    position: absolute;
+    top: 50%;
+   left: 50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  text-align: center;
+}
+.main-proview h1{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+.all-l-r-pr{
+    padding: 10px 0px;
+}
+.l-m-pro{
+    float: left;
+    margin: 0px 20% 0px 25%;
+}
+.r-m-pro{
+    margin: 0px 10% 0px 40px;
+}
+.done-pro {
+    margin: 30px 0px;
+    text-align: center;
+}
+.done-pro a{
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #ea4c89;
 }
 .word-link{
     padding: 10px 5px;
@@ -1682,6 +1720,8 @@ button.dangkynhantin:hover{
 p.thongtin-txt {
     color: #17b978;
 }
+
+
 
 .file-upload {
     background-color: #ffffff;
