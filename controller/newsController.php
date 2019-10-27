@@ -48,6 +48,9 @@ class newsController{
 		}
 		$news = $model->getNews($id,$url,$title);
 
+		$add = $news->luotxem + 1;
+		$addView = $model->addView($add,$news->idtt); // Tăng lượt view
+
 		return array(
 			'news' => $news
 		);

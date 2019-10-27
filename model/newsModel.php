@@ -106,9 +106,17 @@ class newsModel extends DBConnect{
 		";
 		return $this->getMoreRows($sql);
 	}
+	// Hàm tăng lượt xem trang
+	function addView($add,$id){
+		$sql = "UPDATE tintuc
+				SET luotxem = $add
+				WHERE id = '$id'
+		";
+		return $this->executeQuery($sql);
+	} 
 		// Lấy chi tiết tin
 	function getNews($id,$url,$title){
-		$sql = "SELECT *
+		$sql = "SELECT *, tt.id as idtt
 				FROM tintuc tt
 				INNER JOIN theloai tl ON tl.id = id_type
 				INNER JOIN nguoidung u ON u.id = id_user

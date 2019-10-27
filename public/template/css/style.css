@@ -1546,6 +1546,93 @@ button.dangkynhantin:hover{
     background-color: #17b978;
     transition: 0.3s all ease-in-out;
 }
+.comments-area {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 50px 30px;
+  margin-top: 50px;
+}
+
+@media (max-width: 414px) {
+  .comments-area {
+    padding: 50px 8px;
+  }
+}
+
+.comments-area h4 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #222222;
+  font-size: 18px;
+}
+
+.comments-area h5 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.comments-area a {
+  color: #222222;
+}
+
+.comments-area .comment-list {
+  padding-bottom: 48px;
+}
+
+.comments-area .comment-list:last-child {
+  padding-bottom: 0px;
+}
+
+.comments-area .comment-list.left-padding {
+  padding-left: 25px;
+}
+
+@media (max-width: 413px) {
+  .comments-area .comment-list .single-comment h5 {
+    font-size: 12px;
+  }
+  .comments-area .comment-list .single-comment .date {
+    font-size: 11px;
+  }
+  .comments-area .comment-list .single-comment .comment {
+    font-size: 10px;
+  }
+}
+
+.comments-area .thumb {
+  margin-right: 20px;
+}
+
+.comments-area .date {
+  font-size: 13px;
+  color: #cccccc;
+  margin-bottom: 13px;
+}
+
+.comments-area .comment {
+  color: #777777;
+  margin-bottom: 0px;
+}
+
+.comments-area .btn-reply {
+  background-color: #fff;
+  color: #222222;
+  margin: 0px 300px;
+  border: 1px solid #eee;
+  padding: 2px 18px;
+  font-size: 12px;
+  display: block;
+  font-weight: 600;
+  -webkit-transition: all 300ms linear 0s;
+  -o-transition: all 300ms linear 0s;
+  transition: all 300ms linear 0s;
+}
+
+.comments-area .btn-reply:hover {
+  background-color: #17b978;
+  color: #fff;
+}
 .ul-cate{
     padding: 50px 0px;
 }
@@ -1794,3 +1881,15 @@ p.thongtin-txt {
     border: 0;
     transition: all .2s ease;
   }
+p.txt-3-bn-bot{
+    color: #fff;
+    position: absolute;
+    top: 85%;
+    left: 5%;
+    font-weight: bold;
+    font-size: 15px;
+}
+p.txt-3-bn-bot a:hover{
+    color:#00EFAB; 
+    transition: all 0.2s ease-in-out;
+}

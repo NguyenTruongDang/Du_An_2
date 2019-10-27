@@ -18,6 +18,7 @@ $view = $data['view'];
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/d3js/5.12.0/d3.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="public/template/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="public/template/css/slick.css">
@@ -74,6 +75,7 @@ $view = $data['view'];
 									<?=$db[$i]->tieude?>
 								</a>
 							</h3>
+							<p class="txt-3-bn-bot"><a href="">bởi: <?=$db[$i]->ten?> - <i class="fa fa-eye" aria-hidden="true"></i> <?=$db[$i]->luotxem?></a></p>
 						</div>
 					</div>
 					<?php elseif($i==1): ?>
@@ -86,6 +88,7 @@ $view = $data['view'];
 									<?=$db[$i]->tieude?>
 								</a>
 							</h3>
+							<p class="txt-3-bn-bot"><a href="">bởi: <?=$db[$i]->ten?> - <i class="fa fa-eye" aria-hidden="true"></i> <?=$db[$i]->luotxem?></a></p>
 						</div>
 					</div>
 					<?php else: ?>
@@ -98,6 +101,7 @@ $view = $data['view'];
 									<?=$db[$i]->tieude?>
 								</a>
 							</h3>
+							<p class="txt-3-bn-bot"><a href="">bởi: <?=$db[$i]->ten?> - <i class="fa fa-eye" aria-hidden="true"></i> <?=$db[$i]->luotxem?></a></p>
 						</div>
 					</div>
 					<?php endif ?>

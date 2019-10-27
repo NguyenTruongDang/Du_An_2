@@ -10,11 +10,12 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<base href="http://localhost/boots/">
+	<base href="http://localhost/git/Du_An_2/">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/d3js/5.12.0/d3.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="public/template/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="public/template/css/slick.css">
@@ -91,25 +92,115 @@ session_start();
 							<div class="col-md-12">
 								<div class="comment">
 									<div class="tieude-comment">
-										<h3>Leave a Comment</h3>
+										<h3>Bình Luận</h3>
 									</div>
 									<div class="all-ip">
 										<div class="ip-comment">
 											<input type="text" name="" placeholder="Comment">
 										</div>
-										<div class="ip-name">
-											<input type="text" name="" placeholder="Name">
-										</div>
-										<div class="ip-email">
-											<input type="text" name="" placeholder="Email">
-										</div>
-										<div class="ip-website">
-											<input type="text" name="" placeholder="Website">
-										</div>
 									</div>
 									<div class="btn-comment">
 										<button>Post Comment</button>
 									</div>
+
+						<div class="comments-area">
+                            <h4>05 Comments</h4>
+                            <div class="comment-list">
+                                <div class="single-comment justify-content-between d-flex">
+                                    <div class="user justify-content-between d-flex">
+                                        <div class="thumb">
+                                            <img src="img/blog/c1.jpg" alt="">
+                                        </div>
+                                        <div class="desc">
+                                            <h5><a href="#">Emilly Blunt</a></h5>
+                                            <p class="date">December 4, 2017 at 3:12 pm </p>
+                                            <p class="comment">
+                                                Never say goodbye till the end comes!
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="reply-btn">
+                                           <a href="" class="btn-reply text-uppercase">reply</a> 
+                                    </div>
+                                </div>
+                            </div>	
+                            <div class="comment-list left-padding">
+                                <div class="single-comment justify-content-between d-flex">
+                                    <div class="user justify-content-between d-flex">
+                                        <div class="thumb">
+                                            <img src="img/blog/c2.jpg" alt="">
+                                        </div>
+                                        <div class="desc">
+                                            <h5><a href="#">Elsie Cunningham</a></h5>
+                                            <p class="date">December 4, 2017 at 3:12 pm </p>
+                                            <p class="comment">
+                                                Never say goodbye till the end comes!
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="reply-btn">
+                                           <a href="" class="btn-reply text-uppercase">reply</a> 
+                                    </div>
+                                </div>
+                            </div>	
+                            <div class="comment-list left-padding">
+                                <div class="single-comment justify-content-between d-flex">
+                                    <div class="user justify-content-between d-flex">
+                                        <div class="thumb">
+                                            <img src="img/blog/c3.jpg" alt="">
+                                        </div>
+                                        <div class="desc">
+                                            <h5><a href="#">Annie Stephens</a></h5>
+                                            <p class="date">December 4, 2017 at 3:12 pm </p>
+                                            <p class="comment">
+                                                Never say goodbye till the end comes!
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="reply-btn">
+                                           <a href="" class="btn-reply text-uppercase">reply</a> 
+                                    </div>
+                                </div>
+                            </div>	
+                            <div class="comment-list">
+                                <div class="single-comment justify-content-between d-flex">
+                                    <div class="user justify-content-between d-flex">
+                                        <div class="thumb">
+                                            <img src="img/blog/c4.jpg" alt="">
+                                        </div>
+                                        <div class="desc">
+                                            <h5><a href="#">Maria Luna</a></h5>
+                                            <p class="date">December 4, 2017 at 3:12 pm </p>
+                                            <p class="comment">
+                                                Never say goodbye till the end comes!
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="reply-btn">
+                                           <a href="" class="btn-reply text-uppercase">reply</a> 
+                                    </div>
+                                </div>
+                            </div>	
+                            <div class="comment-list">
+                                <div class="single-comment justify-content-between d-flex">
+                                    <div class="user justify-content-between d-flex">
+                                        <div class="thumb">
+                                            <img src="img/blog/c5.jpg" alt="">
+                                        </div>
+                                        <div class="desc">
+                                            <h5><a href="#">Ina Hayes</a></h5>
+                                            <p class="date">December 4, 2017 at 3:12 pm </p>
+                                            <p class="comment">
+                                                Never say goodbye till the end comes!
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="reply-btn">
+                                           <a href="" class="btn-reply text-uppercase">reply</a> 
+                                    </div>
+                                </div>
+                            </div>	                                             				
+                        </div>
 								</div>
 							</div>
 						</div>
