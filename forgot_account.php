@@ -12,7 +12,7 @@ if(isset($_POST['c'])){
     if($d){
         $body =" Xin chào tài khoản : $name <br>
 
-        <a href='http://localhost/boots/changed_password.php?token=".$d->token."'>Thay đổi mật khẩu</a>";
+        <a href='http://localhost/git/Du_An_2/changed_password.php?token=".$d->token."'>Thay đổi mật khẩu</a>";
         $m = sendMail($mail,$body);
         if($m){
             $message = 'mail đã được gửi';
