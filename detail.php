@@ -75,13 +75,16 @@ session_start();
 									<span class="txt-share">
 										Share:
 									</span>
+									<!-- Share Facebook -->
 									<div class="btn-share">
-										<div class="fb-share-button" data-href="https://www.youtube.com/watch?v=2OetzXdEQ5M&list=RDeymezvWJkAo&index=4" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Chia sẻ</a></div>
+										<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Chia sẻ</a></div>
 									</div>
-									<div id="fb-root"></div>
+<div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v4.0"></script>
+									<!-- Share Zalo -->
+									<script src="https://sp.zalo.me/plugins/sdk.js"></script>
 									<div class="btn-share">
-										<a class="font color2" href="#"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</a>
+										<div class="zalo-share-button" data-href="" data-oaid="579745863508352884" data-layout="2" data-color="blue" data-customize=false></div>
 									</div>
 									<div class="btn-share">
 										<a class="font color3" href="#"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</a>
@@ -269,4 +272,7 @@ session_start();
 			</div>
 		</div>
 	</main>
+	<div class="zalo-chat-widget" data-oaid="579745863508352884" data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="0" data-width="350" data-height="420"></div>
+
+<script src="https://sp.zalo.me/plugins/sdk.js"></script>
 <?php require_once "view/footer.php" ?>
