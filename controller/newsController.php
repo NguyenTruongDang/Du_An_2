@@ -47,12 +47,14 @@ class newsController{
 			
 		}
 		$news = $model->getNews($id,$url,$title);
+		$tags = $model->getTagsById($news->idtt);
 
 		$add = $news->luotxem + 1;
 		$addView = $model->addView($add,$news->idtt); // Tăng lượt view
 
 		return array(
-			'news' => $news
+			'news' => $news,
+			'tags' => $tags
 		);
 	}
 	// Xử lí trang cá nhân

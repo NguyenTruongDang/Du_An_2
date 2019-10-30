@@ -166,7 +166,7 @@ class newsModel extends DBConnect{
 				INNER JOIN tintuc_tags tt ON t.id = id_tags
 				WHERE   id_Tintuc = '$idtt'
 		";
-		return $this->getOneRow($sql);
+		return $this->getMoreRows($sql);
 	}
 
 }

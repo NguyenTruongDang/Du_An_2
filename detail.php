@@ -2,7 +2,8 @@
 require_once "controller/newsController.php"; 
 $ctrl = new newsController;
 $data = $ctrl->detail();
-$news = $data['news']
+$news = $data['news'];
+$tags = $data['tags'];
 ?>
 <?php 
 session_start();
@@ -66,7 +67,10 @@ session_start();
 							<div class="col-md-12">
 								<div class="tags">
 									<span class="txt-tag">
-										Tags: <a href="#">Streetstyle</a><a href="#">Crafts</a>
+										Tags: 
+										<?php foreach($tags as $tg): ?>
+										<a href="#<?=$tg->tags_ko?>"><?=$tg->ten_tags?></a> 
+										<?php endforeach ?>
 									</span>
 								</div>
 							</div>
