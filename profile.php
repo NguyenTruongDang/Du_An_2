@@ -9,7 +9,6 @@ $ctrl = new newsController;
 $data = $ctrl->profile();
 $pro = $data['pro'];
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,43 +36,7 @@ $pro = $data['pro'];
 				<div class="container">
 					<div class="proview-bg">
 						<div class="row">
-							<div class="col-md-4 col-sm-12"> 
-								<div class="left-proview">
-									<div class="file-upload">
-										
-									  
-										<div class="image-upload-wrap">
-										  <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
-										  <div class="drag-text">
-											<h3>Chọn ảnh đại diện</h3>
-										  </div>
-										</div>
-										<div class="file-upload-content">
-											<form method="form" enctype="multipart/ form-data">
-										  <img class="file-upload-image" src="#" alt="your image" />
-										  <div class="image-title-wrap">
-											<button  type="button" onclick="removeUpload()" class="remove-image">Xóa <span class="image-title">Uploaded Image</span></button>
-											<button style="margin-top: 50px" class="file-upload-btn" type="submit">Chọn</button>
-										  </div>
-										  </form>
-										</div>
-									  </div>
-									<div class="word-link">
-										<h5>WORK LINK</h5>
-										<a href="#">Website Link</a>
-										<a href="#">Bootsnipp Profile</a>
-										<a href="#">Bootply Profile</a>
-									</div>
-									<div class="skills">
-										<h5>SKILLS</h5>
-										<a href="#">Web Designer</a>
-										<a href="#">Web Developer</a>
-										<a href="#">WordPress</a>
-										<a href="#">WooCommerce</a>
-										<a href="#">PHP, .Net</a>
-									</div>
-								</div>
-							</div>
+							<?php require_once "profile/view/sidebar.php"; ?>
 							<div class="col-md-8 col-sm-12">
 								<div class="right-proview">
 									<div class="txt-proview">
@@ -82,106 +45,27 @@ $pro = $data['pro'];
 										<h2>Web Developer and Designer</h2>
 										<h3>Ngày tham gia : <?=$pro->ngay_tao?></h3>
 									</div>
-									<div class="bot-proview">
-										<a href="#home" id="chuyenabout">Giới thiệu</a>
-										<a href="#profile" id="chuyentimeline">Dòng thời gian</a>
-									</div>
-									<div class="all-about">
-										<div class="row">
-											<div class="thongtin-prorive">
-												<div class="col-md-3 col-xs-3">
-												<p>About id</p>
-												</div>
-												<div class="col-md-9 col-xs-9">
-													<p class="thongtin-txt">AboutHIHIHI</p>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="thongtin-prorive">
-												<div class="col-md-3 col-xs-3">
-												<p>About id</p>
-												</div>
-												<div class="col-md-9 col-xs-9">
-													<p class="thongtin-txt">AboutHIHIHI</p>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="thongtin-prorive">
-												<div class="col-md-3 col-xs-3">
-												<p>About id</p>
-												</div>
-												<div class="col-md-9 col-xs-9">
-													<p class="thongtin-txt">AboutHIHIHI</p>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="thongtin-prorive">
-												<div class="col-md-3 col-xs-3">
-												<p>About id</p>
-												</div>
-												<div class="col-md-9 col-xs-9">
-													<p class="thongtin-txt">AboutHIHIHI</p>
-												</div>
-											</div>
-										</div>
+									
+									<?php 
+										if(isset($_GET['act'])){
+											$act = $_GET['act'];
+										}
+										else{
+											$act = '';
+										}
 
-									</div>
-									<div class="all-timeline">
-										<div class="row">
-											<div class="thongtin-prorive">
-												<div class="col-md-3 col-xs-3">
-												<p>Timeline id</p>
-												</div>
-												<div class="col-md-9 col-xs-9">
-													<p class="thongtin-txt">Timelinehihi</p>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="thongtin-prorive">
-												<div class="col-md-3 col-xs-3">
-												<p>Timeline id</p>
-												</div>
-												<div class="col-md-9 col-xs-9">
-													<p class="thongtin-txt">Timelinehihi</p>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="thongtin-prorive">
-												<div class="col-md-3 col-xs-3">
-												<p>Timeline id</p>
-												</div>
-												<div class="col-md-9 col-xs-9">
-													<p class="thongtin-txt">Timelinehihi</p>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="thongtin-prorive">
-												<div class="col-md-3 col-xs-3">
-												<p>Timeline id</p>
-												</div>
-												<div class="col-md-9 col-xs-9">
-													<p class="thongtin-txt">Timelinehihi</p>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="thongtin-prorive">
-												<div class="col-md-3 col-xs-3">
-												<p>Timeline id</p>
-												</div>
-												<div class="col-md-9 col-xs-9">
-													<p class="thongtin-txt">Timelinehihi</p>
-												</div>
-											</div>
-										</div>
+										switch ($act) {
+											case 'dangbai':
+												
+												require_once "profile/view/dangbai.php";
+												break;
+											
+											default:
+												require_once "profile/view/index.php";
+												break;
+										}
+									?>
 
-									</div>
 								</div>
 							</div>
 						</div>
