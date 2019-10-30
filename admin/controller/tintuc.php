@@ -59,6 +59,25 @@ switch ($act) {
 			if(empty($error)){
 				$model = new adminModel;
 				$post = $model->insertNews($idtype,$iduser,$imgname,$alt_img,$title,$titleko,$ndesc,$content,$tags,$title_seo,$ndesc_seo,$key_seo,$status,$show);
+				// xử lý tags 
+				$idTintuc = $model->getRecentIdInsert();
+				$arrTags = explode(",",$tags);
+				foreach($arrTags as $tag){
+					$tag = trim($tag);
+					$result = $model->selectTags($tag);
+
+					if($result){
+						$idTags = $result->id;
+					}
+					else{
+						$a = $model->insertTags($tag,convert_vi_to_en($tag));
+						$idTags = $model->getRecentIdInsert();
+					}
+					
+					
+					$b=$model->insertTTTags($idTintuc,$idTags);
+				
+				}
 				if($post){
 					header("location:index.php?com=tintuc&act=list");
 					return;
