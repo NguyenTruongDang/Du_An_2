@@ -68,6 +68,19 @@ class newsController{
 			'pro' => $pro,
 		);
 	}
+	// Xử lí trang tag
+	public function tag(){
+		$model = new newsModel;
+		if(isset($_GET['tags'])){
+			$tags = $_GET['tags'];
+		}
+		$tag = $model->getNewsByTags($tags);
+		
+
+		return array(
+			'tag' => $tag,
+		);
+	}
 
 }
 ?>

@@ -168,6 +168,21 @@ class newsModel extends DBConnect{
 		";
 		return $this->getMoreRows($sql);
 	}
+	// Hàm lấy tin tức theo tags
+	function getNewsByTags($tags){
+		$sql = "SELECT * , tt.id as idtt
+				FROM  tintuc tt
+				INNER JOIN theloai tl ON tl.id = id_type
+				INNER JOIN tintuc_tags ttt ON id_tintuc = tt.id
+				INNER JOIN tags t ON t.id = id_tags
+				INNER JOIN nguoidung u ON u.id = id_user
+
+				WHERE tags_ko = '$tags' 
+		";
+		return $this->getMoreRows($sql);
+	}
+	// Hàm lấy thể loại từ tin tức 
+
 
 }
 

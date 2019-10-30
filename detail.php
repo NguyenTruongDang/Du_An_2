@@ -27,7 +27,7 @@ session_start();
 	<script src="public/template/js/popper.min.js"></script>
 	<script src="public/template/js/bootstrap.min.js"></script>
 	<script src="public/template/js/style.js"></script>
-
+	<script async defer data-pin-hover="true" data-pin-tall="true" src="//assets.pinterest.com/js/pinit.js"></script>
 
 </head>
 <?php require_once "view/header.php"; ?>
@@ -69,7 +69,7 @@ session_start();
 									<span class="txt-tag">
 										Tags: 
 										<?php foreach($tags as $tg): ?>
-										<a href="#<?=$tg->tags_ko?>"><?=$tg->ten_tags?></a> 
+										<a href="<?=$tg->tags_ko?>.html"><?=$tg->ten_tags?></a> 
 										<?php endforeach ?>
 									</span>
 								</div>
@@ -91,7 +91,10 @@ session_start();
 										<div class="zalo-share-button" data-href="" data-oaid="579745863508352884" data-layout="2" data-color="blue" data-customize=false></div>
 									</div>
 									<div class="btn-share">
-										<a class="font color3" href="#"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</a>
+										<a class="twitter-share-button"
+										  href="https://twitter.com/intent/tweet?text=Hello%20world"
+										  data-size="large">
+										Tweet</a>
 									</div>
 									<div class="btn-share">
 										<a class="font color4" href="#"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</a>

@@ -5,8 +5,8 @@ session_start();
 <?php 
 require_once "controller/newsController.php";
 $ctrl = new newsController;
-$data = $ctrl->type();
-$tl = $data['type'];
+$data = $ctrl->tag();
+$tt = $data['tag'];
 
 ?>
 <!DOCTYPE html>
@@ -52,7 +52,7 @@ $tl = $data['type'];
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<h1><?=$tl[0]->tentl?></h1>			
+						<h1>#<?=$tt[0]->ten_tags?></h1>			
 					</div>
 				</div>
 			</div>
@@ -63,7 +63,8 @@ $tl = $data['type'];
 				<div class="row">
 					<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
 						<div class="row">
-							<?php foreach($tl as $ty): ?>
+							<?php foreach($tt as $ty): ?>
+
 							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 								<div class="item-tintuc">
 									<a href="<?=$ty->tentl_ko?>/<?=$ty->tieude_ko?>-<?=$ty->idtt?>.html">

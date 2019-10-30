@@ -29,6 +29,7 @@ $view = $data['view'];
 	<script src="public/template/js/popper.min.js"></script>
 	<script src="public/template/js/bootstrap.min.js"></script>
 	<script src="public/template/js/style.js"></script>
+	<script async defer data-pin-hover="true" data-pin-tall="true" src="//assets.pinterest.com/js/pinit.js"></script>								
 
 
 </head>
@@ -69,6 +70,7 @@ $view = $data['view'];
 					<?php if($i==0): ?>
 					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 						<div class="bn-left" style="background-image: url(upload/<?=$db[$i]->ava_img?>);">
+
 							<a class="txt-1-bn" href="<?=$db[$i]->tentl_ko?>"><?=$db[$i]->tentl?></a>
 							<h3 class="txt-2-bn">
 								<a href="<?=$db[$i]->tentl_ko?>/<?=$db[$i]->tieude_ko?>-<?=$db[$i]->idtt?>.html">
