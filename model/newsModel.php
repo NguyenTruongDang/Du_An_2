@@ -159,6 +159,15 @@ class newsModel extends DBConnect{
 		";
 		return $this->getOneRow($sql);
 	}
+	// hàm lấy tags thông qua id bài viết
+	function getTagsById($idtt){
+		$sql = "SELECT * 
+				FROM tags t
+				INNER JOIN tintuc_tags tt ON t.id = id_tags
+				WHERE   id_Tintuc = '$idtt'
+		";
+		return $this->getOneRow($sql);
+	}
 
 }
 
