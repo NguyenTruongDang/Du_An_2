@@ -1764,12 +1764,11 @@ button.dangkynhantin:hover{
     font-size: 12px;
 }
 .bot-proview{
-    padding: 40px 0px;
+    padding: 45px 0px 30px 0px;
     color: #17b978;
 }
-.bot-proview a{
+.bot-proview p{
     font-size: 20px;
-    margin-right: 30px;
 }
 .thongtin-prorive{
     padding: 30px 0px;
@@ -1892,3 +1891,37 @@ p.thongtin-txt {
     border: 0;
     transition: all .2s ease;
   }
+
+
+form .form-group label{
+    margin-bottom: 10px;
+}
+
+.btn-success {
+    color: #17b978!important;
+    background-color: white!important;
+    border-color: #4cae4c;
+    font-size: 15px;
+}
+.btn-primary {
+    color: white!important;
+    background-color: #17b978!important;
+    border-color: #4cae4c;
+    font-size: 20px;
+}
+.custom-select {
+    display: inline-block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: .375rem 1.75rem .375rem .75rem;
+    line-height: 1.5;
+    color: #495057;
+    vertical-align: middle;
+    background: #fff;
+    background-size: 8px 10px;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
