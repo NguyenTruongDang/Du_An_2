@@ -9,7 +9,6 @@ $ctrl = new newsController;
 $data = $ctrl->profile();
 $pro = $data['pro'];
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +16,7 @@ $pro = $data['pro'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.12.0/d3.min.js"></script>
     <link rel="stylesheet" type="text/css" href="public/template/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="public/template/css/slick.css">
@@ -27,6 +27,7 @@ $pro = $data['pro'];
     <script src="public/template/js/popper.min.js"></script>
     <script src="public/template/js/bootstrap.min.js"></script>
     <script src="public/template/js/style.js"></script>
+    <script type="text/javascript" src="helper/ckeditor/ckeditor.js"></script>
 
 </head>
 <?php require_once "view/header.php"; ?>
@@ -36,29 +37,7 @@ $pro = $data['pro'];
 				<div class="container">
 					<div class="proview-bg">
 						<div class="row">
-							<div class="col-md-4 col-sm-12"> 
-								<div class="left-proview">
-									<div class="img-proview">
-										<a href="#">
-											<img src="public/template/img/proview.jpg">
-										</a>
-									</div>
-									<div class="word-link">
-										<h5>WORK LINK</h5>
-										<a href="#">Website Link</a>
-										<a href="#">Bootsnipp Profile</a>
-										<a href="#">Bootply Profile</a>
-									</div>
-									<div class="skills">
-										<h5>SKILLS</h5>
-										<a href="#">Web Designer</a>
-										<a href="#">Web Developer</a>
-										<a href="#">WordPress</a>
-										<a href="#">WooCommerce</a>
-										<a href="#">PHP, .Net</a>
-									</div>
-								</div>
-							</div>
+							<?php require_once "profile/view/sidebar.php"; ?>
 							<div class="col-md-8 col-sm-12">
 								<div class="right-proview">
 									<div class="txt-proview">
@@ -67,106 +46,27 @@ $pro = $data['pro'];
 										<h2>Web Developer and Designer</h2>
 										<h3>Ngày tham gia : <?=$pro->ngay_tao?></h3>
 									</div>
-									<div class="bot-proview">
-										<a href="#home" id="chuyenabout">Giới thiệu</a>
-										<a href="#profile" id="chuyentimeline">Dòng thời gian</a>
-									</div>
-									<div class="all-about">
-										<div class="row">
-											<div class="thongtin-prorive">
-												<div class="col-md-3 col-xs-3">
-												<p>About id</p>
-												</div>
-												<div class="col-md-9 col-xs-9">
-													<p class="thongtin-txt">AboutHIHIHI</p>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="thongtin-prorive">
-												<div class="col-md-3 col-xs-3">
-												<p>About id</p>
-												</div>
-												<div class="col-md-9 col-xs-9">
-													<p class="thongtin-txt">AboutHIHIHI</p>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="thongtin-prorive">
-												<div class="col-md-3 col-xs-3">
-												<p>About id</p>
-												</div>
-												<div class="col-md-9 col-xs-9">
-													<p class="thongtin-txt">AboutHIHIHI</p>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="thongtin-prorive">
-												<div class="col-md-3 col-xs-3">
-												<p>About id</p>
-												</div>
-												<div class="col-md-9 col-xs-9">
-													<p class="thongtin-txt">AboutHIHIHI</p>
-												</div>
-											</div>
-										</div>
+									
+									<?php 
+										if(isset($_GET['act'])){
+											$act = $_GET['act'];
+										}
+										else{
+											$act = '';
+										}
 
-									</div>
-									<div class="all-timeline">
-										<div class="row">
-											<div class="thongtin-prorive">
-												<div class="col-md-3 col-xs-3">
-												<p>Timeline id</p>
-												</div>
-												<div class="col-md-9 col-xs-9">
-													<p class="thongtin-txt">Timelinehihi</p>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="thongtin-prorive">
-												<div class="col-md-3 col-xs-3">
-												<p>Timeline id</p>
-												</div>
-												<div class="col-md-9 col-xs-9">
-													<p class="thongtin-txt">Timelinehihi</p>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="thongtin-prorive">
-												<div class="col-md-3 col-xs-3">
-												<p>Timeline id</p>
-												</div>
-												<div class="col-md-9 col-xs-9">
-													<p class="thongtin-txt">Timelinehihi</p>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="thongtin-prorive">
-												<div class="col-md-3 col-xs-3">
-												<p>Timeline id</p>
-												</div>
-												<div class="col-md-9 col-xs-9">
-													<p class="thongtin-txt">Timelinehihi</p>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="thongtin-prorive">
-												<div class="col-md-3 col-xs-3">
-												<p>Timeline id</p>
-												</div>
-												<div class="col-md-9 col-xs-9">
-													<p class="thongtin-txt">Timelinehihi</p>
-												</div>
-											</div>
-										</div>
+										switch ($act) {
+											case 'dangbai':
+												
+												require_once "profile/view/dangbai.php";
+												break;
+											
+											default:
+												require_once "profile/view/index.php";
+												break;
+										}
+									?>
 
-									</div>
 								</div>
 							</div>
 						</div>

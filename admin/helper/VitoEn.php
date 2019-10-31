@@ -20,8 +20,9 @@
       $str = str_replace("'", "", str_replace("&*#39;","",$str));
       $str = str_replace(".", "", str_replace("&*#39;","",$str));
       $str = str_replace(" ", "-", str_replace("&*#39;","",$str));
-       $str = str_replace(":","", str_replace("&*#39;","",$str));
-        $str = str_replace("&","va", str_replace("&*#39;","",$str));
+      $str = str_replace(":","", str_replace("&*#39;","",$str));
+      $str = str_replace("%","", str_replace("&*#39;","",$str));
+      $str = str_replace("&","va", str_replace("&*#39;","",$str));
       return $str;
 }
 

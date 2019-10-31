@@ -12,7 +12,7 @@ if(isset($_POST['c'])){
     if($d){
         $body =" Xin chào tài khoản : $name <br>
 
-        <a href='http://localhost/boots/changed_password.php?token=".$d->token."'>Thay đổi mật khẩu</a>";
+        <a href='http://localhost/git/Du_An_2/changed_password.php?token=".$d->token."'>Thay đổi mật khẩu</a>";
         $m = sendMail($mail,$body);
         if($m){
             $message = 'mail đã được gửi';
@@ -32,6 +32,7 @@ if(isset($_POST['c'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.12.0/d3.min.js"></script>
     <link rel="stylesheet" type="text/css" href="public/template/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="public/template/css/slick.css">

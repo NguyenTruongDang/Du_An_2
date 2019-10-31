@@ -27,6 +27,7 @@ if(isset($_POST['sm'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.12.0/d3.min.js"></script>
     <link rel="stylesheet" type="text/css" href="public/template/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="public/template/css/slick.css">
@@ -52,33 +53,46 @@ if(isset($_POST['sm'])){
 </nav>
     <div class="site-section" style="margin:50px">
             <?php if(isset($message)) echo $message; ?>
-
-            <form method="POST">
-            <div class="row justify-content-center">
-            	<div class="col-md-4"></div>
-                <div class="col-md-4">
-                    <div class="row">
-                        <div class="col-md-12 form-group">
-                            <label for="username">Tài khoản</label>
-                            <input name="mail" type="email" id="username" class="form-control form-control-md">
+        <div class="container login-container">
+            <div class="row">
+                
+                <div class="col-md-6 login-form-1">
+                    <h3>Đăng nhập với email</h3>
+                    <form method="POST">
+                        <div class="form-group">
+                            <input name="mail" type="email" id="username" class="form-control" placeholder="Email*" value="" />
                         </div>
-                        <div class="col-md-12 form-group">
-                            <label for="pword">Mật khẩu</label>
-                            <input name="pass" type="text" id="pword" class="form-control form-control-md">
+                        <div class="form-group">
+                            <input name="pass" type="text" id="pword" class="form-control" placeholder="Mật khẩu*" value="" />
                         </div>
-                    </div>
-                    <div class="row" style="margin-bottom: 10px">
-                        <div class="col-12">
-                            <input type="submit" name="sm" value="Đăng nhập" class="btn btn-primary btn-md px-2">
+                        <div class="form-group">
+                            <input type="submit" name="sm" value="Đăng nhập" class="btnSubmit" value="Đăng nhập" />
                         </div>
-                    </div>
-                    <a  href="forgot_account.php">Quên mật khẩu</a>
+                        <div class="form-group">
+                            <a  href="forgot_account.php">Quên mật khẩu</a>
+                        </div>
+                    </form>
                 </div>
-                <div class="col-md-4"></div>
+                <div class="col-md-6 login-form-2">
+                    <h3>Đăng nhập với</h3>
+                    <form class="facebook">
+                        <div class="login-facebook">
+                            <a class="icon-right" href="#"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a>
+                        </div>
+                    </form>
+                    <form class="google">
+                        <div class="login-google">
+                            <a class="icon-right" href="#"><i class="fa fa-google" aria-hidden="true"></i> Google</a>
+                        </div>
+                    </form>
+                    <form class="login">
+                        <div class="login">
+                            <a class="icon-right" id="chuyendk" href="dang-ky">Đăng ký</a>
+                        </div>
+                    </form>
+                </div>
             </div>
-            </form>
-
-
+        </div>
     </div>
   
    </div>
