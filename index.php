@@ -9,6 +9,7 @@ $db = $data['st'];
 $new = $data['new'];
 $home = $data['home'];
 $view = $data['view'];
+$tags = $data['tags'];
 ?>
 
 <!DOCTYPE html>
@@ -264,7 +265,7 @@ $view = $data['view'];
 					<div class="row">
 						<div class="col-md-12">
 							<nav class="navbar navbar-default">
-								<a class="navbar-brand phobien" href="#">Featured Video</a>
+								<a class="navbar-brand phobien" href="#">Video đáng chú ý</a>
 							</nav>
 						</div>
 					</div>
@@ -301,20 +302,16 @@ $view = $data['view'];
 					<div class="row" style="padding-top: 50px;">
 						<div class="col-md-12">
 							<nav class="navbar navbar-default">
-								<a class="navbar-brand phobien" href="#">Tag</a>
+								<a class="navbar-brand phobien" href="#">Tags</a>
 							</nav>
 						</div>
 					</div>
 					<div class="row tags">
 						<div class="col-md-12">
-							<a href="#" class="tags">Fashion</a>
-							<a href="#" class="tags">Lefestyle</a>
-							<a href="#" class="tags">Denim</a>
-							<a href="#" class="tags">Streetstyle</a>
-							<a href="#" class="tags">Crafts</a>
-							<a href="#" class="tags">Magazine</a>
-							<a href="#" class="tags">News</a>
-							<a href="#" class="tags">Blogs</a>
+							<?php foreach($tags as $tg): ?>
+							<a href="<?=$tg->tags_ko?>.html" class="tags"><?=$tg->ten_tags?></a>
+							<?php endforeach ?>
+
 
 						</div>
 

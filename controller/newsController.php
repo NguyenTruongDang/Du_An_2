@@ -10,13 +10,15 @@ class newsController{
 		$view = $model->getNewsView(); // Tin xem nhiều
 		$home = $model->getTypeHome(); // Thể loại hiển thị Home
 		$new = $model->getNewsNew(); // Tin mới nhất
+		$tags = $model->getTags(); //Lấy các thẻ tags
 
 
 		return array(
 			'st' => $st,
 			'view' => $view,
 			'home' => $home,
-			'new' => $new
+			'new' => $new,
+			'tags' => $tags
 
 		);
 	}
@@ -33,7 +35,7 @@ class newsController{
 			return;
 		}
 		return array(
-			'type' => $type
+			'type' => $type,
 		);
 	}
 
@@ -54,7 +56,7 @@ class newsController{
 
 		return array(
 			'news' => $news,
-			'tags' => $tags
+			'tags' => $tags,
 		);
 	}
 	// Xử lí trang cá nhân

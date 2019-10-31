@@ -27,6 +27,7 @@ $pro = $data['pro'];
     <script src="public/template/js/popper.min.js"></script>
     <script src="public/template/js/bootstrap.min.js"></script>
     <script src="public/template/js/style.js"></script>
+    <script type="text/javascript" src="helper/ckeditor/ckeditor.js"></script>
 
 </head>
 <?php require_once "view/header.php"; ?>

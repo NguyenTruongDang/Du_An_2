@@ -181,7 +181,14 @@ class newsModel extends DBConnect{
 		";
 		return $this->getMoreRows($sql);
 	}
-	// Hàm lấy thể loại từ tin tức 
+	// Hàm lấy thẻ tags
+	function getTags(){
+		$sql = "SELECT * 
+				FROM tags
+				LIMIT 0,20
+		";
+		return $this->getMoreRows($sql);
+	}
 
 
 }

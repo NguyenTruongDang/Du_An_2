@@ -96,9 +96,6 @@ session_start();
 										  data-size="large">
 										Tweet</a>
 									</div>
-									<div class="btn-share">
-										<a class="font color4" href="#"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</a>
-									</div>
 								</div>
 							</div>
 							<div class="col-md-12">

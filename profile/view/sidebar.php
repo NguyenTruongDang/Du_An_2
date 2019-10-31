@@ -20,16 +20,16 @@
 										</div>
 									  </div>
 									<div class="word-link">
-										<h5>WORK LINK</h5>
-										<a href="#">Website Link</a>
-										<a href="#">Bootsnipp Profile</a>
+										<h5>Nhật ký hoạt động</h5>
+										<a href="#">Bài đã comment</a>
+										<a href="#">Bài đã lưu</a>
 										<a href="#">Bootply Profile</a>
 									</div>
 									<div class="skills">
-										<h5>SKILLS</h5>
-										<a href="#">Web Designer</a>
-										<a href="#">Web Developer</a>
-										<a href="#">WordPress</a>
+										<h5>Đăng bài</h5>
+										<a href="?act=dangbai">Đăng bài viết</a>
+										<a href="#">Trạng thái bài viết</a>
+										<a href="#">Quà tặng</a>
 										<a href="#">WooCommerce</a>
 										<a href="#">PHP, .Net</a>
 									</div>

@@ -78,37 +78,48 @@ if(isset($_POST['sm'])){
     <div class="site-section" style="margin:50px">
             <?php if(isset($message)) echo $message; ?>
 
-            <form method="POST">
-            <div class="row justify-content-center">
-            	<div class="col-md-4"></div>
-                <div class="col-md-4">
-                    <div class="row">
-                        <div class="col-md-12 form-group">
-                            <label for="username">Tên</label>
-                            <input name="name" value="<?php if(isset($_POST['name'])){ echo $_POST['name']; } ?>" type="text" id="username" class="form-control form-control-md">
-                        </div>
-                        <div class="col-md-12 form-group">
-                            <label for="username">Mail</label>
-                            <input name="mail" value="<?php if(isset($_POST['mail'])){ echo $_POST['mail']; } ?>" type="email" id="username" class="form-control form-control-md">
-                        </div>
-                        <div class="col-md-12 form-group">
-                            <label for="pword">Mật khẩu</label>
-                            <input name="pass" value="<?php if(isset($_POST['pass'])){ echo $_POST['pass']; } ?>" type="password" id="pword" class="form-control form-control-md">
-                        </div>
-                        <div class="col-md-12 form-group">
-                            <label for="username">Nhập lại mật khẩu</label>
-                            <input name="rpass" value="<?php if(isset($_POST['rpass'])){ echo $_POST['rpass']; } ?>" type="password" id="username" class="form-control form-control-md">
-                        </div>
+            <div class="container signup-container">
+                <div class="row">
+                    <div class="col-md-6 signup-form-1">
+                        <h3>Tạo tài khoản FreeKok</h3>
+                        <form method="POST">
+                            <div class="form-group">
+                                <input name="name" value="<?php if(isset($_POST['name'])){ echo $_POST['name']; } ?>" type="text" id="username" class="form-control form-control-md" placeholder="Họ tên">
+                            </div>
+                            <div class="form-group">
+                                <input name="mail" value="<?php if(isset($_POST['mail'])){ echo $_POST['mail']; } ?>" type="email" id="username" class="form-control form-control-md" placeholder="Mail">
+                            </div>
+                            <div class="form-group">
+                                <input name="pass" value="<?php if(isset($_POST['pass'])){ echo $_POST['pass']; } ?>" type="password" id="pword" class="form-control form-control-md" placeholder="Mật khẩu">
+                            </div>
+                            <div class="form-group">
+                                <input name="rpass" value="<?php if(isset($_POST['rpass'])){ echo $_POST['rpass']; } ?>" type="password" id="username" class="form-control form-control-md" placeholder="Nhập lại mật khẩu">
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" name="sm" class="btnSubmit" value="Tạo tài khoản" />
+                            </div>
+                        </form>
                     </div>
-                    <div class="row" style="margin-bottom: 10px">
-                        <div class="col-12">
-                            <input type="submit" name="sm" value="Đăng ký" class="btn btn-primary btn-md px-2">
-                        </div>
+                    <div class="col-md-6 signup-form-2">
+                        <h3>Đăng ký với</h3>
+                        <form class="facebook">
+                            <div class="signup-facebook">
+                                <a class="icon-right" href="#"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a>
+                            </div>
+                        </form>
+                        <form class="google">
+                            <div class="signup-google">
+                                <a class="icon-right" href="#"><i class="fa fa-google" aria-hidden="true"></i> Google</a>
+                            </div>
+                        </form>
+                        <form class="signup">
+                            <div class="signup">
+                                <a class="icon-right" id="chuyendn" href="dang-nhap">Đăng nhập</a>
+                            </div>
+                        </form>
                     </div>
                 </div>
-                <div class="col-md-4"></div>
             </div>
-            </form>
     </div>
   
    </div>
