@@ -9,6 +9,7 @@ $db = $data['st'];
 $new = $data['new'];
 $home = $data['home'];
 $view = $data['view'];
+$tags = $data['tags'];
 ?>
 
 <!DOCTYPE html>
@@ -18,6 +19,7 @@ $view = $data['view'];
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/d3js/5.12.0/d3.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="public/template/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="public/template/css/slick.css">
@@ -28,6 +30,7 @@ $view = $data['view'];
 	<script src="public/template/js/popper.min.js"></script>
 	<script src="public/template/js/bootstrap.min.js"></script>
 	<script src="public/template/js/style.js"></script>
+	<script async defer data-pin-hover="true" data-pin-tall="true" src="//assets.pinterest.com/js/pinit.js"></script>								
 
 
 </head>
@@ -68,12 +71,14 @@ $view = $data['view'];
 					<?php if($i==0): ?>
 					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 						<div class="bn-left" style="background-image: url(upload/<?=$db[$i]->ava_img?>);">
+
 							<a class="txt-1-bn" href="<?=$db[$i]->tentl_ko?>"><?=$db[$i]->tentl?></a>
 							<h3 class="txt-2-bn">
 								<a href="<?=$db[$i]->tentl_ko?>/<?=$db[$i]->tieude_ko?>-<?=$db[$i]->idtt?>.html">
 									<?=$db[$i]->tieude?>
 								</a>
 							</h3>
+							<p class="txt-3-bn-bot"><a href="">bởi: <?=$db[$i]->ten?> - <i class="fa fa-eye" aria-hidden="true"></i> <?=$db[$i]->luotxem?></a></p>
 						</div>
 					</div>
 					<?php elseif($i==1): ?>
@@ -86,6 +91,7 @@ $view = $data['view'];
 									<?=$db[$i]->tieude?>
 								</a>
 							</h3>
+							<p class="txt-3-bn-bot"><a href="">bởi: <?=$db[$i]->ten?> - <i class="fa fa-eye" aria-hidden="true"></i> <?=$db[$i]->luotxem?></a></p>
 						</div>
 					</div>
 					<?php else: ?>
@@ -98,6 +104,7 @@ $view = $data['view'];
 									<?=$db[$i]->tieude?>
 								</a>
 							</h3>
+							<p class="txt-3-bn-bot"><a href="">bởi: <?=$db[$i]->ten?> - <i class="fa fa-eye" aria-hidden="true"></i> <?=$db[$i]->luotxem?></a></p>
 						</div>
 					</div>
 					<?php endif ?>
@@ -258,7 +265,7 @@ $view = $data['view'];
 					<div class="row">
 						<div class="col-md-12">
 							<nav class="navbar navbar-default">
-								<a class="navbar-brand phobien" href="#">Featured Video</a>
+								<a class="navbar-brand phobien" href="#">Video đáng chú ý</a>
 							</nav>
 						</div>
 					</div>
@@ -295,20 +302,16 @@ $view = $data['view'];
 					<div class="row" style="padding-top: 50px;">
 						<div class="col-md-12">
 							<nav class="navbar navbar-default">
-								<a class="navbar-brand phobien" href="#">Tag</a>
+								<a class="navbar-brand phobien" href="#">Tags</a>
 							</nav>
 						</div>
 					</div>
 					<div class="row tags">
 						<div class="col-md-12">
-							<a href="#" class="tags">Fashion</a>
-							<a href="#" class="tags">Lefestyle</a>
-							<a href="#" class="tags">Denim</a>
-							<a href="#" class="tags">Streetstyle</a>
-							<a href="#" class="tags">Crafts</a>
-							<a href="#" class="tags">Magazine</a>
-							<a href="#" class="tags">News</a>
-							<a href="#" class="tags">Blogs</a>
+							<?php foreach($tags as $tg): ?>
+							<a href="<?=$tg->tags_ko?>.html" class="tags"><?=$tg->ten_tags?></a>
+							<?php endforeach ?>
+
 
 						</div>
 

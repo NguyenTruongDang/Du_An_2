@@ -10,13 +10,15 @@ class newsController{
 		$view = $model->getNewsView(); // Tin xem nhiều
 		$home = $model->getTypeHome(); // Thể loại hiển thị Home
 		$new = $model->getNewsNew(); // Tin mới nhất
+		$tags = $model->getTags(); //Lấy các thẻ tags
 
 
 		return array(
 			'st' => $st,
 			'view' => $view,
 			'home' => $home,
-			'new' => $new
+			'new' => $new,
+			'tags' => $tags
 
 		);
 	}
@@ -33,7 +35,7 @@ class newsController{
 			return;
 		}
 		return array(
-			'type' => $type
+			'type' => $type,
 		);
 	}
 
@@ -47,9 +49,14 @@ class newsController{
 			
 		}
 		$news = $model->getNews($id,$url,$title);
+		$tags = $model->getTagsById($news->idtt);
+
+		$add = $news->luotxem + 1;
+		$addView = $model->addView($add,$news->idtt); // Tăng lượt view
 
 		return array(
-			'news' => $news
+			'news' => $news,
+			'tags' => $tags,
 		);
 	}
 	// Xử lí trang cá nhân
@@ -61,6 +68,19 @@ class newsController{
 		}
 		return array(
 			'pro' => $pro,
+		);
+	}
+	// Xử lí trang tag
+	public function tag(){
+		$model = new newsModel;
+		if(isset($_GET['tags'])){
+			$tags = $_GET['tags'];
+		}
+		$tag = $model->getNewsByTags($tags);
+		
+
+		return array(
+			'tag' => $tag,
 		);
 	}
 

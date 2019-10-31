@@ -16,6 +16,7 @@ $tl = $data['type'];
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/d3js/5.12.0/d3.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="public/template/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="public/template/css/slick.css">
@@ -26,6 +27,7 @@ $tl = $data['type'];
 	<script src="public/template/js/popper.min.js"></script>
 	<script src="public/template/js/bootstrap.min.js"></script>
 	<script src="public/template/js/style.js"></script>
+	<script async defer data-pin-hover="true" data-pin-tall="true" src="//assets.pinterest.com/js/pinit.js"></script>
 
 
 </head>

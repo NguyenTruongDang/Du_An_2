@@ -87,6 +87,29 @@ class adminModel extends DBConnect{
 		";
 		return $this->executeQuery($sql);
 	}
+	// hàm kiểm tra tags có tồn tại không
+	function selectTags($tags){
+		$sql = "SELECT *
+				FROM tags
+				WHERE ten_tags = '$tags' 
+		";
+		return $this->getOneRow($sql);
+	}
+	// Hàm thêm dữ liệu tags
+	function insertTags($ten_tags,$tags_ko){
+		$sql = "INSERT INTO tags(ten_tags,tags_ko)
+				VALUES ('$ten_tags', '$tags_ko')
+
+		";
+		return $this->executeQuery($sql);
+	}
+	// Hàm thê dữ liệu tags + tintuc
+	function insertTTTags($idTintuc,$idTags){
+		$sql = "INSERT INTO tintuc_tags(id_tags,id_tintuc)
+				VALUES ('$idTags','$idTintuc')
+		";
+		return $this->executeQuery($sql);
+	}
 }
 
 ?>
