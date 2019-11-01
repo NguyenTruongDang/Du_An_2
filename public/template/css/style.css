@@ -791,7 +791,7 @@ strong,
     top: 23px;
 }
 .login-container .row {
-    border: 1px black solid;
+    border: 1px #17b978 solid;
     width: 90%;
 }
 .login-form-2 h3{
@@ -818,7 +818,7 @@ strong,
 .login-form-1 .btnSubmit{
     font-weight: 600;
     color: #fff;
-    background-color: #0062cc;
+    background-color: #17b978;
 }
 .login-form-2 .btnSubmit{
     font-weight: 600;
@@ -942,7 +942,7 @@ strong,
         top: 18px;
     }
     .signup-container .row {
-        border: 1px black solid;
+        border: 1px #17b978 solid;
         width: 90%;
     }
     .signup-form-2 h3{
@@ -963,7 +963,7 @@ strong,
     .signup-form-1 .btnSubmit{
         font-weight: 600;
         color: #fff;
-        background-color: #0062cc;
+        background-color: #17b978;
     }
     .signup-form-2 .btnSubmit{
         font-weight: 600;

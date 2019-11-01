@@ -1,13 +1,12 @@
 <?php 
+session_start();
 require_once "controller/newsController.php"; 
 $ctrl = new newsController;
 $data = $ctrl->detail();
 $news = $data['news'];
 $tags = $data['tags'];
 ?>
-<?php 
-session_start();
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
