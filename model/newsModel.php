@@ -106,9 +106,17 @@ class newsModel extends DBConnect{
 		";
 		return $this->getMoreRows($sql);
 	}
+	// Hàm tăng lượt xem trang
+	function addView($add,$id){
+		$sql = "UPDATE tintuc
+				SET luotxem = $add
+				WHERE id = '$id'
+		";
+		return $this->executeQuery($sql);
+	} 
 		// Lấy chi tiết tin
 	function getNews($id,$url,$title){
-		$sql = "SELECT *
+		$sql = "SELECT *, tt.id as idtt
 				FROM tintuc tt
 				INNER JOIN theloai tl ON tl.id = id_type
 				INNER JOIN nguoidung u ON u.id = id_user
@@ -151,6 +159,37 @@ class newsModel extends DBConnect{
 		";
 		return $this->getOneRow($sql);
 	}
+	// hàm lấy tags thông qua id bài viết
+	function getTagsById($idtt){
+		$sql = "SELECT * 
+				FROM tags t
+				INNER JOIN tintuc_tags tt ON t.id = id_tags
+				WHERE   id_Tintuc = '$idtt'
+		";
+		return $this->getMoreRows($sql);
+	}
+	// Hàm lấy tin tức theo tags
+	function getNewsByTags($tags){
+		$sql = "SELECT * , tt.id as idtt
+				FROM  tintuc tt
+				INNER JOIN theloai tl ON tl.id = id_type
+				INNER JOIN tintuc_tags ttt ON id_tintuc = tt.id
+				INNER JOIN tags t ON t.id = id_tags
+				INNER JOIN nguoidung u ON u.id = id_user
+
+				WHERE tags_ko = '$tags' 
+		";
+		return $this->getMoreRows($sql);
+	}
+	// Hàm lấy thẻ tags
+	function getTags(){
+		$sql = "SELECT * 
+				FROM tags
+				LIMIT 0,20
+		";
+		return $this->getMoreRows($sql);
+	}
+
 
 }
 

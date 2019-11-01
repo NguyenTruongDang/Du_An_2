@@ -39,9 +39,11 @@ class DBConnect{
     return false;
   }
 
-  function getRecentIdInsert(){
+  // Hfam lấy id vừa mới insert
+  function getIdInsert(){
         return $this->conn->lastInsertId();
-    }
+  }
+
 
 }
 ?>
