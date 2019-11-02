@@ -23,15 +23,13 @@
 										<h5>Nhật ký hoạt động</h5>
 										<a href="#">Bài đã comment</a>
 										<a href="#">Bài đã lưu</a>
-										<a href="#">Bootply Profile</a>
 									</div>
 									<div class="skills">
 										<h5>Đăng bài</h5>
 										<a href="?act=dangbai">Đăng bài viết</a>
 										<a href="#">Trạng thái bài viết</a>
 										<a href="#">Quà tặng</a>
-										<a href="#">WooCommerce</a>
-										<a href="#">PHP, .Net</a>
+										<a href="#">Cài đặt</a>
 									</div>
 								</div>
 							</div>

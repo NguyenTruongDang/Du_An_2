@@ -5,14 +5,14 @@
 										</p>
 									</div>
 									<div class="all-about">
-										<form>
+										<form method="POST" enctype='multipart/form-data'>
 											<div class="form-group">
 												<label for="exampleFormControlInput1">Tiêu đề bài viết</label>
-												<input type="text" class="form-control" id="exampleFormControlInput1">
+												<input type="text" name="title" class="form-control" id="exampleFormControlInput1">
 											</div>
 											<div class="form-group">
 												<label for="exampleFormControlTextarea1">Mô tả</label>
-												<textarea class="form-control" id="exampleFormControlTextarea1"
+												<textarea class="form-control" name="ndesc" id="exampleFormControlTextarea1"
 													rows="3"></textarea>
 											</div>
 											<div class="form-group">
@@ -21,30 +21,23 @@
 													<script>    CKEDITOR.replace( 'content' ); </script>
 											</div>
 											<div class="form-group">
-												<div class="custom-control custom-radio">
-													<input type="radio" class="custom-control-input" id="customRadio"
-														name="example" value="customEx">
-													<label class="custom-control-label" for="customRadio">Custom radio
-														1</label>
-												</div>
-												<div class="custom-control custom-radio">
-													<input type="radio" class="custom-control-input" id="customRadio2"
-														name="example" value="customEx">
-													<label class="custom-control-label" for="customRadio2">Custom radio
-														2</label>
-												</div>
+												<label for="exampleFormControlTextarea1">Tải hình đại diện: </label>
+												<input type="file" name="img">
+											</div>
+											<div class="form-group">
+
 												<div class="col-auto my-1">
 													<label class="mr-sm-2"
-														for="inlineFormCustomSelect">Lựa chọn: </label>
-													<select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-														<option selected>Lựa chọn....</option>
-														<option value="1">1</option>
-														<option value="2">2</option>
-														<option value="3">3</option>
+														for="inlineFormCustomSelect">Thể loại: </label>
+													<select name="type" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+														<option selected>Chọn thể loại</option>
+														<?php foreach($a as $type): ?>
+														<option value="<?=$type->id?>"><?=$type->tentl?></option>
+														<?php endforeach?>
 													</select>
 												</div>
 											</div>
-											<button type="button" class="btn btn-primary">Đăng bài</button>
+											<button type="submit" name="sub" class="btn btn-primary">Đăng bài</button>
 										</form>
 									</div>
 
