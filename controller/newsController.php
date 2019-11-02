@@ -50,11 +50,12 @@ class newsController{
 		}
 		$news = $model->getNews($id,$url,$title);
 		$tags = $model->getTagsById($news->idtt);
+
 		// Tính lượt view
-		$session_name = 'Tintuc-'.$news->idtt;
-		$checkView = $_SESSION[$session_name];
+		$ssname = 'Tintuc-'.$news->idtt;
+		$checkView = $_SESSION[$ssname];
 		if(!$checkView){
-			$_SESSION[$session_name] = 1;
+			$_SESSION[$ssname] = 1;
 			$add = $news->luotxem + 1;
 			$addView = $model->addView($add,$news->idtt); // Tăng lượt view
 		}

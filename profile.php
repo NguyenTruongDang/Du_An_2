@@ -45,7 +45,7 @@ $pro = $data['pro'];
 									<div class="txt-proview">
 										<a href="logout.php">EIT</a>
 										<h1><?=$pro->ten?></h1>
-										<h2>Web Developer and Designer</h2>
+										<h2><?=$pro->mail?></h2>
 										<h3>Ngày tham gia : <?=$pro->ngay_tao?></h3>
 									</div>
 									
