@@ -32,30 +32,6 @@ $tags = $data['tags'];
 <?php require_once "view/header.php"; 
 
 
-$curl = curl_init();
-
-curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://api.fpt.ai/hmi/tts/v5',
-  CURLOPT_CUSTOMREQUEST => 'POST',
-  CURLOPT_POSTFIELDS => 'xin chào',
-  CURLOPT_HTTPHEADER => array(
-    'api-key: STrqKpA6uSmpzPpe6AcElL1sHBD7j0dM',
-    'speed: ',
-    'voice: banmai'
-  ),
-));
-
-$response = curl_exec($curl);
-$err = curl_error($curl);
-
-curl_close($curl);
-
-if ($err) {
-  echo 'cURL Error #:' . $err;
-} else {
-  echo $response;
-}
-
 
 ?>
 	<main>

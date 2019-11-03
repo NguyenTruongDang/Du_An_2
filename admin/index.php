@@ -4,6 +4,7 @@
  require_once "view/header.php" ;
  require_once "model/adminModel.php";
  require_once "helper/VitoEn.php";
+ require_once "helper/PHPMailer/sendmail.php";
  $model = new adminModel;
 
   if(isset($_GET['com'])){
