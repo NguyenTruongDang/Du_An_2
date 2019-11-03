@@ -2,9 +2,10 @@
 
 class adminModel extends DBConnect{
 	// Hàm lấy dữ liệu
-	function selectTable($tb){
+	function selectTintuc($tb){
 		$sql = "SELECT * 
 				FROM $tb
+				WHERE deleted = 0
 
 		";
 		return $this->getMoreRows($sql);
@@ -25,6 +26,15 @@ class adminModel extends DBConnect{
 
 		";
 		return $this->getMoreRows($sql);
+	}
+	// hàm lấy dữ liệu tin tức với người dùng
+	function getNewsAndUser($id){
+		$sql = "SELECT * 
+				FROM tintuc as tt
+				INNER JOIN nguoidung u ON u.id = id_user
+				WHERE tt.id = $id
+		";
+		return $this->getOneRow($sql);
 	}
 	// Hàm thêm dữ liệu tin tức 
 	function insertNews($idtype,$iduser,$imgname,$alt_img,$title,$titleko,$ndesc,$content,$tags,$title_seo,$ndesc_seo,$key_seo,$status,$show){
@@ -117,9 +127,20 @@ class adminModel extends DBConnect{
 				INNER JOIN theloai tl ON tl.id = id_type 
 				INNER JOIN nguoidung u ON u.id = id_user
 				WHERE hienthi = 0
+				AND tt.deleted = 0
 		";
 		return $this->getMoreRows($sql);
 	}
+	// Hàm xóa nhưng lưu lại database
+	function deleted($id){
+		$sql = "UPDATE tintuc 
+				SET deleted = 1
+				WHERE id = $id  
+
+		";	
+		return $this->executeQuery($sql);
+	}
+
 }
 
 ?>

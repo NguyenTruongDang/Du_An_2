@@ -42,8 +42,8 @@
                                 <td><?=$n->tieude?></td>
                                 <td><img width="50px" src="../upload/<?=$n->ava_img?>"></td>
                                 <td><?=$n->mota?></td>
-                                <td><a href="index.php?com=kiemduyet&act=edit&id=<?=$n->idtt?>"><img src="../public/images/iconedit.png" width="20px"></a></td>
-                                <td><a onclick="return confirm('Bạn thật sự muốn xóa không?')" href="index.php?com=tintuc&act=delete&id=<?=$n->idNews?>"><img src="../public/images/icondel.png" width="20px"></a></td>
+                                <td><a href="index.php?com=kiemduyet&act=edit&id=<?=$n->idtt?>"><img src="public/images/eye.png" width="20px"></a></td>
+                                <td><a onclick="return confirm('Bạn thật sự muốn xóa không?')" href="index.php?com=kiemduyet&act=delete&id=<?=$n->idtt?>"><img src="public/images/icondel.png" width="20px"></a></td>
                               </tr>
                             <?php endforeach ?>
                             </tbody>

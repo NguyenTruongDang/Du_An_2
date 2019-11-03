@@ -9,13 +9,15 @@ else{
 switch ($act) {
 	case 'list':
 		$newsko = $model->getNewsNo();
+
 		require_once "view/kiemduyet/list.php";
+
 		break;
 	case 'edit':
 		if(isset($_GET['id'])){
 			$id = $_GET['id'];
 			$type = $model->selectTable('theloai');
-			$data = $model->selectTableById('tintuc',$id);
+			$data = $model->getNewsAndUser($id);
 			if(isset($_POST['edit'])){
 				$file = $_FILES['img']['name'];
 					if($file!=''){
@@ -62,9 +64,17 @@ switch ($act) {
 
 					$d = $model->updateNews($imgname,$alt_img,$title,$titleko,$ndesc,$content,$tags,$title_seo,$ndesc_seo,$key_seo,$status,$show,$id);
 					if($d){
-						header("location:index.php?com=tintuc&act=list");
+						if($show == 1){
+							$body = "Xin chào tài khoản :".$data->ten."<br/> Bài <h3> ".$data->tieude."</h3> đã được duyệt";
+						$a = sendMail($data->mail,$body);
+						}
+						
+						
+						header("location:index.php?com=kiemduyet&act=list");
 						return;
+
 					}
+					
 
 			}
 
@@ -73,6 +83,26 @@ switch ($act) {
 
 		require_once "view/kiemduyet/edit.php";
 		break;
+	case 'delete':
+		if(isset($_GET['id'])){
+			$id = $_GET['id'];
+			$data = $model->getNewsAndUser($id);
+			$del = $model->deleted($id);
+			if($del){
+				$body = "Xin chào tài khoản :".$data->ten."<br/> Bài <h3> ".$data->tieude."</h3> Không được duyệt vì vi phạm ";
+				$a = sendMail($data->mail,$body);
+
+    			header("location:index.php?com=kiemduyet&act=list");
+					return;
+    		}
+    		else{
+    			header("location:index.php?com=kiemduyet&act=list");
+					return;
+    		}
+    	}
+    	
+		break;
+
 	default:
 		# code...
 		break;
