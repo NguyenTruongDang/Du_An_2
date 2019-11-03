@@ -110,6 +110,16 @@ class adminModel extends DBConnect{
 		";
 		return $this->executeQuery($sql);
 	}
+	// Hàm lấy bài viết chưa được duyệt
+	function getNewsNo(){
+		$sql = "SELECT *, tt.id as idtt
+				FROM tintuc tt
+				INNER JOIN theloai tl ON tl.id = id_type 
+				INNER JOIN nguoidung u ON u.id = id_user
+				WHERE hienthi = 0
+		";
+		return $this->getMoreRows($sql);
+	}
 }
 
 ?>
