@@ -23,6 +23,10 @@
       require_once "controller/tintuc.php";
       break;
 
+    case 'kiemduyet':
+      require_once "controller/kiemduyet.php";
+      break;
+
     case 'cauhinh':
       require_once "controller/cauhinh.php";
       break;
