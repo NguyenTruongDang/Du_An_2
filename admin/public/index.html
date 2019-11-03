@@ -6,18 +6,30 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
-
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/all.css">
+  <link rel="stylesheet" href="assets/css/circle.css">
+  <link rel="stylesheet" href="assets/sass/circle.sass">
   <link rel="stylesheet" href="assets/css/fontawesome.css">
 
   <title>Softworld</title>
   <link href="assets/css/main.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 </head>
 
 <body class="app">
-  <div id="loader">
+  <!-- <div id="loader">
     <div class="spinner"></div>
-  </div>
+  </div> -->
   <script type="text/javascript">window.addEventListener('load', () => {
       const loader = document.getElementById('loader');
       setTimeout(() => {
@@ -223,73 +235,163 @@
           </ul>
         </div>
       </div>
-       <div class="container">
-                          <h2>Quản lí tin tức</h2>
-                            <nav aria-label="breadcrumb">
-                              <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.php">Quản lí</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Tất cả</li>
-                              </ol>
-                            </nav>
-                            <div class="row">
-                              <div class="col-sm-1">
-                               <a href="index.php?com=tintuc&act=add"><button type="button" class="btn btn-primary">Thêm</button></a>
-                               </div>
-                               <form class="col-sm-4" method="GET" action="">
-                                <div class="input-group ">
-                                  <input type="hidden" name="com" value="tintuc">
-                                  <input type="text" class="form-control" placeholder="Search" name="key">
-                                  <div class="input-group-btn">
-                                    <button class="btn btn-default" name="search" type="submit"><i class="fas fa-search"></i></button>
-                                  </div>
-                                  <input type="hidden" name="act" value="search">
-                                </div>
-                                </form>
-                            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="bocthongtin">
+              <div class="thongtin">
+                <div class="icon">
+                  <i class="fa fa-users"></i>
+                </div>
+                <div class="noidung">
+                  <h5>Tổng users</h5>
+                  <h1>100,000</h1>
+                </div>
+                <hr>
+                <div class="noidung2">
+                  <div class="noidungne">
+                    <h5>Yesterday</h5>
+                    <h4>100</h4>
+                  </div>
+                  <div class="noidungne">
+                      <h5>Yesterday</h5>
+                      <h4>200</h4>
+                    </div>
+                  <div class="noidungne">
+                      <h5>This Week</h5>
+                      <h4>300</h4>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="bocthongtin">
+              <div class="thongtin">
+                <div class="icon">
+                  <i class="fa fa-users"></i>
+                </div>
+                <div class="noidung">
+                  <h5>Tổng users</h5>
+                  <h1>100,000</h1>
+                </div>
+                <hr>
+                <div class="noidung1">
+                  <div class="noidungleft">
+                    <h5>Yesterday</h5>
+                    <h4>10,009</h4>
+                  </div>
+                  <div class="noidungright">
+                      <h5>This Week</h5>
+                      <h4>178,222</h4>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="bocthongtin">
+              <div class="thongtin">
+                <div class="icon">
+                  <i class="fa fa-users"></i>
+                </div>
+                <div class="noidung">
+                  <h5>Tổng users</h5>
+                  <h1>100,000</h1>
+                </div>
+                <hr>
+                <div class="noidung1">
+                  <div class="noidungleft">
+                    <h5>Yesterday</h5>
+                    <h4>10,009</h4>
+                  </div>
+                  <div class="noidungright">
+                      <h5>This Week</h5>
+                      <h4>178,222</h4>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+              <div class="bocthongtin">
+                <div class="thongtin">
+                  <div class="icon">
+                    <i class="fa fa-users"></i>
+                  </div>
+                  <div class="noidung">
+                    <h5>Tổng users</h5>
+                    <h1>100,000</h1>
+                  </div>
+                  <hr>
+                  <div class="noidung1">
+                    <div class="noidungleft">
+                      <h5>Yesterday</h5>
+                      <h4>10,009</h4>
+                    </div>
+                    <div class="noidungright">
+                        <h5>This Week</h5>
+                        <h4>178,222</h4>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-         
-                          <table class="table table-striped" style="margin-top: 30px">
-                            <thead>
-                              <tr>
-                                <th>Thứ tự</th>
-                                <th>Thể loại</th>
-                                <th>Tiêu đề</th>
-                                <th>Hình ảnh</th>
-                                <th>Tóm tắt</th>
-                                <th>Đặc biệt</th>
-                                <th>Sửa</th>
-                                <th>Xóa</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <?php foreach($news as $n): ?>
-                              <tr>
-                                <td><?=$n->idNews?></td>
-                                <td><?=$n->name?></td>
-                                <td><?=$n->title?></td>
-                                <td><img width="50px" src="../upload/<?=$n->img?>"></td>
-                                <td><?=$n->ndesc?></td>
-                                <td>
-                                  <label class="radio-inline"><input type="radio" name="optradio" checked></label>
-                                  
-                                </td>
-                                <td><a href="index.php?com=tintuc&act=edit&id=<?=$n->idNews?>"><i class="fas fa-edit"></i></a></td>
-                                <td><a onclick="return confirm('Bạn thật sự muốn xóa không?')" href="index.php?com=tintuc&act=delete&id=<?=$n->idNews?>"><i class="fas fa-trash-alt"></i></a></td>
-                              </tr>
-                            <?php endforeach ?>
-                            </tbody>
-                          </table>
-                        </div>
-    </div>
+          </div>
+          <div class="clearfix">
 
-    <footer>
-      <div class="footer">
-        <div class="footer_UI">
-          <h5>Công Ty Softworld Việt Nam</h5>
+            <div class="bar-chart-block block">
+              <div class='grafico bar-chart'>
+                 <ul class='eje-y'>
+                   <li data-ejeY='60'></li>
+                   <li data-ejeY='45'></li>
+                   <li data-ejeY='30'></li>
+                   <li data-ejeY='15'></li>
+                   <li data-ejeY='0'></li>
+                 </ul>
+                 <ul class='eje-x'>
+                   <li data-ejeX='37'><i>España</i></li>
+                   <li data-ejeX='56'><i>Portugal</i></li>
+                   <li data-ejeX='25'><i>Italia</i></li>
+                   <li data-ejeX='18'><i>Grecia</i></li>
+                   <li data-ejeX='45'><i>EE.UU</i></li>
+                   <li data-ejeX='50'><i>México</i></li>
+                   <li data-ejeX='33'><i>Chile</i></li>
+                 </ul>
+              </div>
+            </div>
+            <div class="c100 p50 big">
+                <span>20%</span>
+                <div class="slice">
+                    <div class="bar"></div>
+                    <div class="fill"></div>
+                </div>
+            </div>
+            <div class="c100 p50 big">
+                <span>10%</span>
+                <div class="slice">
+                    <div class="bar"></div>
+                    <div class="fill"></div>
+                </div>
+            </div>
+
+
+            
+
+
+        </div>
         </div>
       </div>
-  </div>
-  </footer>
+
+      <footer>
+        <div class="footer">
+          <div class="footer_UI">
+            <h5>Công Ty Softworld Việt Nam</h5>
+          </div>
+        </div>
+    </div>
+    </footer>
 
   </div>
   <script type="text/javascript" src="assets/js/vendor.js"></script>
