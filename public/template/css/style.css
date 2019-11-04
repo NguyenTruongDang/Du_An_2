@@ -1924,3 +1924,68 @@ form .form-group label{
     -moz-appearance: none;
     appearance: none;
 }
+.img-r-bv img{
+    max-width: 100%;
+    height: auto;
+}
+.text-r-bv{
+    display: block;
+    overflow: hidden;
+    height: auto;
+}
+.text-r-bv h3{
+    font-weight: bold;
+    font-size: 13px;
+}
+.text-r-bv p{
+    font-size: 10px;
+}
+.text-r-bv h5{
+    font-size: 15px;
+}
+.all-bv{
+    padding-top: 20px;
+}
+.right-baiviet{
+    padding-top: 30px;
+}
+.right-baiviet h1{
+    font-size: 25px;
+    font-weight: bold;
+}
+.bv-trangthai a{
+    font-size: 12px;
+    font-weight: bold;
+}
+.bv-trangthai,
+.bv-xoa {
+    padding:  0px 0px 0px;
+    text-align: center;
+    justify-content: center;
+}
+.bv-trangthai span{
+    display: inline-block;
+    padding-top: 5px;
+    font-size: 15px;
+    text-align: center;
+}
+.bv-trangthai span.duyet{
+    color: green;                                           
+}
+.bv-trangthai span.chua{
+    color: red;
+}
+.bv-trangthai span.cho{
+    color: yellow;
+}
+.bv-xoa a{
+    font-size: 12px;
+    font-weight: bold;
+
+}
+.print{
+    margin: 10px;
+}
+.print button{
+    padding: 0px 10px;
+}

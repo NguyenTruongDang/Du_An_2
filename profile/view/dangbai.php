@@ -37,6 +37,7 @@
 													</select>
 												</div>
 											</div>
+
 											<button type="submit" name="sub" class="btn btn-primary">Đăng bài</button>
 										</form>
 									</div>

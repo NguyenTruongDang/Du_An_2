@@ -1,5 +1,6 @@
 <?php
 session_start();
+ob_start();
 require_once "view/header.php"; 
 require_once "model/proModel.php";
 require_once "controller/newsController.php";
@@ -110,6 +111,20 @@ $pro = $data['pro'];
 												}
 												require_once "profile/view/dangbai.php";
 												break;
+											case 'baiduyet':
+												$model = new proModel;
+												$show = $model->getNewsByUser($_SESSION['iduser']);
+												if(isset($_GET['id'])){
+													$id = $_GET['id'];
+													$del = $model->delete($id);
+													if($del){
+														header('location:?act=baiduyet');
+														return;
+													}
+												}
+												
+												require_once "profile/view/baiduyet.php";
+												break;
 											
 											default:
 												require_once "profile/view/index.php";
@@ -126,3 +141,4 @@ $pro = $data['pro'];
 		</div>
 	</main>
 <?php require_once "view/footer.php"; ?>
+ <?php ob_end_flush(); ?>
