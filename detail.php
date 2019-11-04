@@ -56,7 +56,7 @@ $tags = $data['tags'];
 				<div class="row">
 					<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
 						<div class="row print" >
-							<button onclick="myFunction()"><span class="glyphicon glyphicon-print"></span></button>
+							<button onclick="myFunction()"><i class="fa fa-print" ></i></button>
 
 <script>
 function myFunction() {
