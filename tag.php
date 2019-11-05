@@ -33,148 +33,74 @@ $tt = $data['tag'];
 </head>
 <?php require_once "view/header.php"; ?>
 	<main>
-		<div class="slide-trendding">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-						
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-						<div class="trendding-right">
-							<input type="text" name="" placeholder="Search">
-							<button><i class="fa fa-search" aria-hidden="true"></i></button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="entertaiment">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<h1>#<?=$tt[0]->ten_tags?></h1>			
-					</div>
-				</div>
-			</div>
-		</div>
 
-		<div class="bangtin">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+		<div class="container">
+			<div class="row" style="padding-top: 50px;">
+				<div class="col-md-8">
+					<!-- Thể loại tin 1 -->
+					<div class="theloai1">
 						<div class="row">
-							<?php foreach($tt as $ty): ?>
+							<div class="col-md-12">
+								<nav class="navbar navbar-default">
+									<a class="navbar-brand giaitri" href="#">Tags : #<?=$tt[0]->ten_tags?></a>
 
-							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-								<div class="item-tintuc">
-									<a href="<?=$ty->tentl_ko?>/<?=$ty->tieude_ko?>-<?=$ty->idtt?>.html">
-										<img src="upload/<?=$ty->ava_img?>">
-									</a>
-									<div class="txt-tintuc">
-										<a href="<?=$ty->tentl_ko?>/<?=$ty->tieude_ko?>-<?=$ty->idtt?>.html"><h3><?=$ty->tieude?></h3></a>
-										<p>bởi <?=$ty->ten?> - <?=$ty->ngaydang?></p>
+								</nav>
+							</div>
+
+						</div>
+
+						<div class="row" style="padding-bottom:50px">
+
+							<div class="col-md-12" style="padding-right: 25px;">
+								<?php foreach($tt as $tag): ?>
+								<div class="row"
+									style="display: flex; margin-bottom: 30px;justify-content: space-between;">
+									<div class="col-md-3">
+										<div class="bochinhanhne">
+											<a href="#" class="postright">
+												<img src="upload/<?=$tag->ava_img?>" alt="<?=$tag->alt_img?>">
+											</a>
+										</div>
+
+									</div>
+									<div class="col-md-9">
+										<div class="titlepostright">
+											<h5 style="padding-bottom: 10px;"><a href="#" class="postright1"><?=$tag->tieude?></a></h5>
+											<span class="tagtintuc">
+												<a href="#"><?=$tag->tentl?></a>
+												<span>-</span>
+												<span><?=$tag->ngaydang?></span>
+											</span>
+											<p><?=$tag->mota?></p>
+										</div>
 									</div>
 								</div>
-							</div>
 							<?php endforeach ?>
 
+							</div>
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-								<div class="col-md-12 dangkynhantin" style="margin-bottom:25px">
-									<h5>Subscribe</h5>
-									<p>Get all latest content delivered to your email a few times a month.</p>
-									<form class="dangkynhantin" style="position: relative">
-										<input class="dangkynhantin" type="text" name="email" placeholder="Email">
-										<button class="dangkynhantin"><i class="fa fa-arrow-right"
-												aria-hidden="true"></i></button>
-									</form>
-								</div>
-								<div class="row">
-									<div class="col-md-12">
-										<nav class="navbar navbar-default">
-											<a class="navbar-brand phobien" href="#">Tag</a>
-										</nav>
-									</div>
-								</div>
-								<div class="row phobien">
-								<div class="col-md-12">
-									<ul>
-										<li style="justify-content: space-between; display: flex;padding-bottom: 30px;">
-											<div class="số">
-												1
-											</div>
-											<a href="#" class="noidung">
-												Lorem ipsum dolor sit amet, consectetur adipiscing elit
-											</a>
-										</li>
-										<li style="justify-content: space-between; display: flex;padding-bottom: 30px;">
-											<div class="số">
-												2
-											</div>
-											<a href="#" class="noidung">
-												Proin velit consectetur non neque
-											</a>
-										</li>
-										<li style="justify-content: space-between; display: flex;padding-bottom: 30px;">
-											<div class="số">
-												3
-											</div>
-											<a href="#" class="noidung">
-												Nunc vestibulum, enim vitae condimentum volutpat lobortis ante
-											</a>
-										</li>
-										<li style="justify-content: space-between; display: flex;padding-bottom: 30px;">
-											<div class="số">
-												4
-											</div>
-											<a href="#" class="noidung">
+					<!-- Hết thể loại tin 1 -->
 
-												Proin velit justo consectetur non neque elementum
-											</a>
-										</li>
-										<li style="justify-content: space-between; display: flex;padding-bottom: 30px;">
-											<div class="số">
-												5
-											</div>
-											<a href="#" class="noidung">
-												Proin velit consectetur non neque
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-12">
-									<a href="#">
-									<img src="img/banner-02.jpg" alt="" style="width: 300px;height: 850px;">
-									</a>
-								</div>
-							</div>
-							<div class="row" style="padding-top: 50px;">
-								<div class="col-md-12">
-									<nav class="navbar navbar-default">
-										<a class="navbar-brand phobien" href="#">Tag</a>
-									</nav>
-								</div>
-							</div>
-							<div class="row tags">
-								<div class="col-md-12">
-									<a href="#" class="tags">Fashion</a>
-									<a href="#" class="tags">Lefestyle</a>
-									<a href="#" class="tags">Denim</a>
-									<a href="#" class="tags">Streetstyle</a>
-									<a href="#" class="tags">Crafts</a>
-									<a href="#" class="tags">Magazine</a>
-									<a href="#" class="tags">News</a>
-									<a href="#" class="tags">Blogs</a>
+				</div>
+				<div class="col-md-4">
 
-								</div>
 
-							</div>
+					<!-- hình quảng cáo -->
+					<div class="hinhquangcao">
+						<a href="#">
+							<img src="img/banner-02.jpg" alt="" style="width: 100%;height: 850px;">
+						</a>
 					</div>
+					<!-- Hết hình quảng cáo -->
+
+
 				</div>
 			</div>
+
+
+
 		</div>
+
 	</main>
 <?php require_once "view/footer.php"; ?>

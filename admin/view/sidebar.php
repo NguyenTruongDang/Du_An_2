@@ -25,12 +25,11 @@
                 class="icon-holder"><i class="c-blue-500 ti-home"></i> </span><span class="title">Dashboard</span></a>
           </li>
           <li class="nav-item"><a class="sidebar-link" href="?com=tintuc&act=list"><span class="icon-holder">
-                <i class="c-brown-500 fab fa-windows"></i></span><span class="title">Quản lý tin tức</span></a></li>
+                <i class="c-brown-500 fab fa-windows"></i></span><span class="title">Quản lý bài viết</span></a></li>
           <li class="nav-item"><a class="sidebar-link" href="?com=theloai&act=list"><span class="icon-holder"><i
                   class="fas fa-table c-blue-500"></i> </span><span class="title">Quản lý thể loại</span></a></li>
-          <li class="nav-item"><a class="sidebar-link" href="#"><span class="icon-holder"><i
-                  class="c-deep-orange-500 fas fa-map-marked-alt"></i> </span><span class="title">Cấu hình bảng
-                Routing</span></a>
+          <li class="nav-item"><a class="sidebar-link" href="?com=kiemduyet&act=list"><span class="icon-holder"><i
+                  class="c-deep-orange-500 fas fa-map-marked-alt"></i> </span><span class="title">Kiểm duyệt bài viết từ người dùng</span></a>
           </li>
           <li class="nav-item"><a class="sidebar-link" href="#"><span class="icon-holder"><i
                   class="c-deep-purple-500 fas fa-cogs"></i> </span><span class="title">Cấu hình C</span></a></li>
