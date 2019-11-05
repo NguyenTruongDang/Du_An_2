@@ -1989,3 +1989,58 @@ form .form-group label{
 .print button{
     padding: 0px 10px;
 }
+
+
+/* Change password */
+.changepass-container h3{
+    font-size: 23px;
+}
+.changepass-container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-family: "Arial",sans-serif;
+    display: flex;
+    /* justify-content: center; */
+}
+.changepass-form-1{
+    padding-top: 3%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 1%;
+
+}
+.changepass-form-1 h3{
+    text-align: center;
+    color: #333;
+}
+.changepass-container .row.borderne {
+
+    width: 100%;
+}
+
+.changepass-container form{
+    padding: 5%;
+}
+.btnSubmit
+{
+    /* width: 20%; */
+    padding: 2.8%;
+    border: none;
+}
+.changepass-form-1 .btnSubmit{
+    font-weight: 600;
+    color: #fff;
+    background-color: #17b978;
+}
+.changepass-form-1 .ForgetPwd{
+    color: #0062cc;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+#clickbutton{
+    float: right;
+}
+.col-form-label{
+    text-align: right;
+}

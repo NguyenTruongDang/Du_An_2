@@ -3,16 +3,11 @@
 
 // Ẩn hiện about, timeline
 $(document).ready(function () {
-    $('.all-timeline').hide();
+    $('.all-about').hide();
     $('#chuyenabout').css("color", "#23527c");
-    $('#chuyentimeline').click(function () {
-        $('.all-timeline').fadeIn('slow');
-        $('.all-about').hide('slow');
+    $('#clickbutton').click(function () {
+        $('.all-about').slideToggle();
         $('#chuyenabout').css("color", "");
-    });
-    $('#chuyenabout').click(function () {
-        $('.all-timeline').fadeOut('slow');
-        $('.all-about').show('slow');
     });
 });
 
