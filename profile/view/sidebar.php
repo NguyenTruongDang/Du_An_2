@@ -29,7 +29,7 @@
 										<a href="?act=dangbai">Đăng bài viết</a>
 										<a href="?act=baiduyet">Trạng thái bài viết</a>
 										<a href="#">Quà tặng</a>
-										<a href="#">Cài đặt</a>
+										<a href="?act=chinhsua">Cài đặt</a>
 									</div>
 								</div>
 							</div>

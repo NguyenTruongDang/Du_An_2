@@ -44,7 +44,8 @@ $pro = $data['pro'];
 							<div class="col-md-8 col-sm-12">
 								<div class="right-proview">
 									<div class="txt-proview">
-										<a href="logout.php">EIT</a>
+										<a href="?act=chinhsua">Sửa</a>
+										<a href="logout.php">Logout</a>
 										<h1><?=$pro->ten?></h1>
 										<h2><?=$pro->mail?></h2>
 										<h3>Ngày tham gia : <?=$pro->ngay_tao?></h3>
@@ -124,6 +125,25 @@ $pro = $data['pro'];
 												}
 												
 												require_once "profile/view/baiduyet.php";
+												break;
+											case 'chinhsua':
+												$model = new proModel;
+												$data = $model->getUserById($_SESSION['iduser']);
+												if(isset($_POST['sm'])){
+													$ten = $_POST['ten'];
+													$tenko = convert_vi_to_en($ten);
+													$mail = $_POST['mail'];
+													$sdt = $_POST['sdt'];
+
+													$d = $model->updateUser($ten,$tenko,$mail,$sdt,$_SESSION['iduser']);
+													if($d){
+														header('location:?act=chinhsua');
+														return;
+													}
+												}
+
+
+												require_once "profile/view/chinhsua.php";
 												break;
 											
 											default:

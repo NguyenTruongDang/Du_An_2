@@ -34,6 +34,25 @@ class proModel extends DBConnect{
 		";
 		return $this->executeQuery($sql);
 	}
+	// hàm show người dùng bởi id 
+	function getUserById($id){
+		$sql = "SELECT * 
+				FROM nguoidung
+				WHERE id = $id
+		";
+		return $this->getOneRow($sql);
+	}
+	// Hàm update người dùng
+	function updateUser($ten,$tenko,$mail,$sdt,$id){
+		$sql = "UPDATE nguoidung 
+				SET ten = '$ten',
+					ten_ko = '$tenko',
+					mail = '$mail',
+					sdt = '$sdt'
+				WHERE id = $id
+		";
+		return $this->executeQuery($sql);
+	}
 }
 
 ?>
