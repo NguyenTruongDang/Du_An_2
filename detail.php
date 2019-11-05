@@ -32,7 +32,6 @@ $tags = $data['tags'];
 <?php require_once "view/header.php"; 
 
 
-
 ?>
 	<main>
 		<div class="slide-trendding">
@@ -52,8 +51,18 @@ $tags = $data['tags'];
 		</div>
 		<div class="txt-chitiet">
 			<div class="container">
+
 				<div class="row">
 					<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+						<div class="row print" >
+							<button onclick="myFunction()"><i class="fa fa-print" aria-hidden="true"></i></button>
+
+<script>
+function myFunction() {
+  window.print();
+}
+</script>
+						</div>
 						<div class="row">
 							<div class="col-md-12">
 								<div class="tieude-chitiet">
@@ -93,12 +102,7 @@ $tags = $data['tags'];
 									<div class="btn-share">
 										<div class="zalo-share-button" data-href="" data-oaid="579745863508352884" data-layout="2" data-color="blue" data-customize=false></div>
 									</div>
-									<div class="btn-share">
-										<a class="twitter-share-button"
-										  href="https://twitter.com/intent/tweet?text=Hello%20world"
-										  data-size="large">
-										Tweet</a>
-									</div>
+
 								</div>
 							</div>
 							<div class="col-md-12">

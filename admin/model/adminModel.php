@@ -2,7 +2,7 @@
 
 class adminModel extends DBConnect{
 	// Hàm lấy dữ liệu
-	function selectTintuc($tb){
+	function selectTable($tb){
 		$sql = "SELECT * 
 				FROM $tb
 				WHERE deleted = 0

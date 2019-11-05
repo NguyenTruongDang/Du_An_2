@@ -55,6 +55,5 @@
 
 
 
-
 <?php require_once "view/footer.php" ?>
  <?php ob_end_flush(); ?>

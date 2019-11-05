@@ -1,5 +1,6 @@
 <?php
 session_start();
+ob_start();
 require_once "view/header.php"; 
 require_once "model/proModel.php";
 require_once "controller/newsController.php";
@@ -43,7 +44,8 @@ $pro = $data['pro'];
 							<div class="col-md-8 col-sm-12">
 								<div class="right-proview">
 									<div class="txt-proview">
-										<a href="logout.php">EIT</a>
+										<a href="?act=chinhsua">Sửa</a>
+										<a href="logout.php">Logout</a>
 										<h1><?=$pro->ten?></h1>
 										<h2><?=$pro->mail?></h2>
 										<h3>Ngày tham gia : <?=$pro->ngay_tao?></h3>
@@ -110,6 +112,39 @@ $pro = $data['pro'];
 												}
 												require_once "profile/view/dangbai.php";
 												break;
+											case 'baiduyet':
+												$model = new proModel;
+												$show = $model->getNewsByUser($_SESSION['iduser']);
+												if(isset($_GET['id'])){
+													$id = $_GET['id'];
+													$del = $model->delete($id);
+													if($del){
+														header('location:?act=baiduyet');
+														return;
+													}
+												}
+												
+												require_once "profile/view/baiduyet.php";
+												break;
+											case 'chinhsua':
+												$model = new proModel;
+												$data = $model->getUserById($_SESSION['iduser']);
+												if(isset($_POST['sm'])){
+													$ten = $_POST['ten'];
+													$tenko = convert_vi_to_en($ten);
+													$mail = $_POST['mail'];
+													$sdt = $_POST['sdt'];
+
+													$d = $model->updateUser($ten,$tenko,$mail,$sdt,$_SESSION['iduser']);
+													if($d){
+														header('location:?act=chinhsua');
+														return;
+													}
+												}
+
+
+												require_once "profile/view/chinhsua.php";
+												break;
 											
 											default:
 												require_once "profile/view/index.php";
@@ -126,3 +161,4 @@ $pro = $data['pro'];
 		</div>
 	</main>
 <?php require_once "view/footer.php"; ?>
+ <?php ob_end_flush(); ?>
