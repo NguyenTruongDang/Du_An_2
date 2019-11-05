@@ -30,10 +30,10 @@
   <div class="row">
     <div class="col-md-12">
       <div class="bot-proview">
-        <a href="#home" id="chuyenabout">Đổi mật khẩu</a>
+        <a href="#home" id="changepass">Đổi mật khẩu</a>
         <button type="button" class="btn btn-secondary" id="clickbutton">Secondary</button>
       </div>
-      <div class="all-about">
+      <div class="all-changepass">
         <div class="changepass-container">
           <div class="row borderne">
             <div class="col-md-12 changepass-form-1">
