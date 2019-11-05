@@ -4,13 +4,13 @@ $(document).ready(function () {
   $('.all-timeline').hide();
   $('#chuyenabout').css("color", "#23527c");
   $('#chuyentimeline').click(function () {
-      $('.all-timeline').fadeIn('slow');
-      $('.all-about').hide('slow');
-      $('#chuyenabout').css("color", "");
+    $('.all-timeline').fadeIn('slow');
+    $('.all-about').hide('slow');
+    $('#chuyenabout').css("color", "");
   });
   $('#chuyenabout').click(function () {
-      $('.all-timeline').fadeOut('slow');
-      $('.all-about').show('slow');
+    $('.all-timeline').fadeOut('slow');
+    $('.all-about').show('slow');
   });
 });
 
@@ -18,43 +18,53 @@ $(document).ready(function () {
 
 // Ẩn hiện đổi mât khẩu
 $(document).ready(function () {
-    $('.all-changepass').hide();
-    $('#changepass').css("color", "#23527c");
-    $('#clickbutton').click(function () {
-        $('.all-changepass').slideToggle();
-        $('#changepass').css("color", "");
-    });
+  $('.all-changepass').hide();
+  $('#clickbutton1').hide();
+  $('#changepass').css("color", "#23527c");
+  $('#clickbutton').click(function () {
+    $('.all-changepass').slideToggle();
+    $('#changepass').css("color", "");
+    $('#clickbutton1').show();
+    $('#clickbutton1').css("float", "right");
+    $('#clickbutton').hide();
+  });
+  $('#clickbutton1').click(function () {
+    $('.all-changepass').slideToggle();
+    $('#changepass').css("color", "");
+    $('#clickbutton1').hide();
+    $('#clickbutton').show();
+  });
 });
 
 function readURL(input) {
-    if (input.files && input.files[0]) {
-  
-      var reader = new FileReader();
-  
-      reader.onload = function(e) {
-        $('.image-upload-wrap').hide();
-  
-        $('.file-upload-image').attr('src', e.target.result);
-        $('.file-upload-content').show();
-  
-        $('.image-title').html(input.files[0].name);
-      };
-  
-      reader.readAsDataURL(input.files[0]);
-  
-    } else {
-      removeUpload();
-    }
+  if (input.files && input.files[0]) {
+
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+      $('.image-upload-wrap').hide();
+
+      $('.file-upload-image').attr('src', e.target.result);
+      $('.file-upload-content').show();
+
+      $('.image-title').html(input.files[0].name);
+    };
+
+    reader.readAsDataURL(input.files[0]);
+
+  } else {
+    removeUpload();
   }
-  
-  function removeUpload() {
-    $('.file-upload-input').replaceWith($('.file-upload-input').clone());
-    $('.file-upload-content').hide();
-    $('.image-upload-wrap').show();
-  }
-  $('.image-upload-wrap').bind('dragover', function () {
-          $('.image-upload-wrap').addClass('image-dropping');
-      });
-      $('.image-upload-wrap').bind('dragleave', function () {
-          $('.image-upload-wrap').removeClass('image-dropping');
-  });
+}
+
+function removeUpload() {
+  $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+  $('.file-upload-content').hide();
+  $('.image-upload-wrap').show();
+}
+$('.image-upload-wrap').bind('dragover', function () {
+  $('.image-upload-wrap').addClass('image-dropping');
+});
+$('.image-upload-wrap').bind('dragleave', function () {
+  $('.image-upload-wrap').removeClass('image-dropping');
+});
