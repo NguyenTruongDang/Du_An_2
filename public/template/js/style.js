@@ -1,13 +1,28 @@
 
-
-
 // Ẩn hiện about, timeline
 $(document).ready(function () {
-    $('.all-about').hide();
-    $('#chuyenabout').css("color", "#23527c");
+  $('.all-timeline').hide();
+  $('#chuyenabout').css("color", "#23527c");
+  $('#chuyentimeline').click(function () {
+      $('.all-timeline').fadeIn('slow');
+      $('.all-about').hide('slow');
+      $('#chuyenabout').css("color", "");
+  });
+  $('#chuyenabout').click(function () {
+      $('.all-timeline').fadeOut('slow');
+      $('.all-about').show('slow');
+  });
+});
+
+
+
+// Ẩn hiện đổi mât khẩu
+$(document).ready(function () {
+    $('.all-changepass').hide();
+    $('#changepass').css("color", "#23527c");
     $('#clickbutton').click(function () {
-        $('.all-about').slideToggle();
-        $('#chuyenabout').css("color", "");
+        $('.all-changepass').slideToggle();
+        $('#changepass').css("color", "");
     });
 });
 
