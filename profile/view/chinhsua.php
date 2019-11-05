@@ -31,7 +31,8 @@
     <div class="col-md-12">
       <div class="bot-proview">
         <a href="#home" id="changepass">Đổi mật khẩu</a>
-        <button type="button" class="btn btn-secondary" id="clickbutton">Secondary</button>
+        <button type="button" class="btn btn-secondary" id="clickbutton">Chỉnh sửa</button>
+        <button type="button" class="btn btn-secondary" id="clickbutton1">Đóng</button>
       </div>
       <div class="all-changepass">
         <div class="changepass-container">
