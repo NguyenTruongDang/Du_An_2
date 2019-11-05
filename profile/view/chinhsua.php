@@ -1,5 +1,5 @@
 <div class="right-baiviet">
-	<h1>Cài đặt tài khoản</h1>
+	<h1>Cài đặt tài khoản </h1>
 <form class="form-horizontal" method="POST">
   <div class="form-group">
     <label class="control-label col-sm-3" for="text">Tên tài khoản :</label>
@@ -22,7 +22,7 @@
 
   <div class="form-group">
     <div class="col-sm-offset-3 col-sm-9">
-      <button type="submit" name="sm" class="btn btn-default">Thay đổi</button>
+      <button type="submit" name="sm" class="btn btn-default">Chỉnh sửa</button>
     </div>
   </div>
 </form>
