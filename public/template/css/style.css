@@ -872,18 +872,7 @@ strong,
     font-size: 17px;
     font-weight: 700;
 }
-.signup-form-2 div.signup{
-    width: 25%;
-    height: 45px;
-    background-color: #fff;
-    border: 1px solid #3B5999;
-}
-.signup-form-2 form div.signup a {
-    line-height: 45px;
-    color: #3B5999;
-    font-size: 17px;
-    font-weight: 700;
-}
+
 
 .login-form-2 form .login-google a {
     line-height: 50px;
@@ -1022,7 +1011,18 @@ strong,
         background-color: #fff;
         border: 1px solid #3B5999;
         }
-
+        .signup-form-2 div.signup{
+            width: 25%;
+            height: 45px;
+            background-color: #fff;
+            border: 1px solid #3B5999;
+        }
+        .signup-form-2 form div.signup a {
+            line-height: 45px;
+            color: #3B5999;
+            font-size: 17px;
+            font-weight: 700;
+        }
 .lentop{
     width: 55px;
     height: 55px;
@@ -1924,3 +1924,52 @@ form .form-group label{
     -moz-appearance: none;
     appearance: none;
 }
+
+
+/* Change password */
+.changepass-container h3{
+    font-size: 23px;
+}
+.changepass-container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-family: "Arial",sans-serif;
+    display: flex;
+    justify-content: center;
+}
+.changepass-form-1{
+    padding-top: 3%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 1%;
+
+}
+.changepass-form-1 h3{
+    text-align: center;
+    color: #333;
+}
+.changepass-container .row {
+    border: 1px black solid;
+    width: 90%;
+}
+
+.changepass-container form{
+    padding: 5%;
+}
+.btnSubmit
+{
+    width: 20%;
+    padding: 2.8%;
+    border: none;
+}
+.changepass-form-1 .btnSubmit{
+    font-weight: 600;
+    color: #fff;
+    background-color: #17b978;
+}
+.changepass-form-1 .ForgetPwd{
+    color: #0062cc;
+    font-weight: 400;
+    text-decoration: none;
+}
+
