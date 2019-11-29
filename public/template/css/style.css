@@ -2044,3 +2044,154 @@ form .form-group label{
 .col-form-label{
     text-align: right;
 }
+
+
+/* Điểm số */
+
+.panel.panel-default{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.row.diemso ul{
+    list-style-type: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.row.diemso div.số{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #999;
+    width: 25px;
+    height: 25px;
+    color: #fff;
+}
+.row.diemso a.noidung{
+    width: 230px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.25;
+    font-weight: 500;
+    word-wrap: break-word;
+}
+.row.diemso a.noidung:hover{
+    color: #17b978;
+    transition: all 0.3s ease-in-out;
+}
+
+.row.diemsocanhan span.diemcanhan{
+display: block;
+text-align: center;
+}
+table.diemcanhan {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #17b978;
+    color: #fff;
+}
+
+td{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    font-size: 18px;
+}
+th.name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+th.viewmore{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    border-top: 1px solid transparent;
+    border-color: #ddd;
+    background-color: #0e774d;
+}
+th.viewmore a{
+    margin-left: 20px;
+    font-size: 15px;
+}
+th.viewmore a:hover{
+    color: whitesmoke;
+    transition: 0.3s all ease-in-out;
+    
+}
+
+
+
+
+
+
+/* Bình Luân */
+.comments-area {
+    margin-top:50px;
+}
+.comments-area h4{
+    text-align: center;
+}
+.comment-list{
+    margin-top: 40px;
+}
+.comment-list .single-comment{
+    display: flex;
+    justify-content: space-between;
+
+}
+.comment-list .single-comment .user{
+    display: flex;
+    justify-content: space-between;
+
+}
+.comment-list .single-comment .user .thumb{
+    width: 100px;
+    display: block;
+    margin-right: 20px;
+
+}
+.comment-list .single-comment .user .thumb img{
+    width: 100%;
+
+}
+.comment-list .single-comment .user .desc{
+    width: 562px;
+    word-wrap: break-word;
+}
+.comment-list .single-comment .user .desc h5 a{
+    font-weight: 700;
+    font-size: 18px;
+}
+.comment-list .single-comment .user .desc h5 a:hover{
+    color: #17b978;
+    transition: 0.3s all ease-in-out;
+}
+.comment-list .single-comment .user .desc p.date{
+    color: #a9a9a9;
+    font-size: 13px;
+    font-weight: 300;
+}
+.comment-list .single-comment .user .desc p.comment{
+    margin-top: 20px;
+    font-size: 16px;
+}
+.comment-list .single-comment .reply-btn a.btn-reply{
+    border: 1px solid;
+    padding: 5px 10px;
+}
+.comment-list .single-comment .reply-btn a.btn-reply:hover{
+    border: 1px solid #17b978;
+    color: #17b978;
+    transition: 0.3s all ease-in-out;
+}
+
+.comment-list.left-padding {
+    margin-left: 50px;
+    background-color:#efebeb;
+}
