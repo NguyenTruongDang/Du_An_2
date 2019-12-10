@@ -53,6 +53,41 @@ class proModel extends DBConnect{
 		";
 		return $this->executeQuery($sql);
 	}
+	// Hàm lấy dữ liệu người dùng đã lưu
+	function getSaved($idu){
+		$sql = "SELECT * 
+				FROM saved s
+				INNER JOIN tintuc ON id = id_tintuc
+				WHERE id_nguoidung = $idu
+
+		";
+		return $this->getMoreRows($sql);
+	}
+	// Hàm lấy thể loại dựa và bài viết đã lưu
+	function getTypeSave($idtt){
+		$sql = "SELECT * , tt.id as idtt
+				FROM tintuc tt 
+				INNER JOIN theloai tl ON tl.id = id_type
+				WHERE tt.id = $idtt
+		";
+		return $this->getOneRow($sql);
+	}
+	//Hàm xóa bài đã lưu
+	function delSave($idtt){
+		$sql = "DELETE FROM saved 
+				WHERE id_tintuc = $idtt
+		";
+		return $this->executeQuery($sql);
+	}
+	//Hàm kiểm tra tồn tại bài đã lưu
+	function checkSave($idtt,$idu = 0){
+		$sql = "SELECT * 
+				FROM saved 
+				WHERE id_tintuc = $idtt
+				AND id_nguoidung = $idu
+		";
+		return $this->getOneRow($sql);
+	}
 }
 
 ?>

@@ -1,4 +1,9 @@
-<?php ob_start(); ?>
+<?php ob_start(); 
+session_start();
+if(!isset($_SESSION['uid'])){
+    header('location:login.php');
+}
+?>
 <?php 
 
  require_once "view/header.php" ;
@@ -31,13 +36,33 @@
     case 'cauhinh':
       require_once "controller/cauhinh.php";
       break;
+    case 'caidat':
+      if(isset($_SESSION['uid'])){
+        $data = $model->selectTableById('nguoidung',$_SESSION['uid']);
+        if(isset($_POST['sm'])){
+          $ten = $_POST['ten'];
+          $tenko = convert_vi_to_en($ten);
+          $mail = $_POST['mail'];
+          $sdt = $_POST['sdt'];
+
+          $d = $model->updateUser($ten,$tenko,$mail,$sdt,$_SESSION['uid']);
+          if($d){
+            header('location:?com=caidat');
+            return;
+          }
+        }
+
+      }
+
+      require_once "view/caidat.php";
+      break;
 
     case 'comment':
       require_once "controller/comment/index.php";
       break;
 
     case 'user':
-      require_once "controller/user/index.php";
+      require_once "controller/user.php";
       break;
 
     default:

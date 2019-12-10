@@ -1,5 +1,4 @@
 <?php require_once "DBConnect.php"; 
-
 class newsModel extends DBConnect{
 	//Hàm lấy dữ liệu 
 	function select($tb){
@@ -38,7 +37,7 @@ class newsModel extends DBConnect{
 				FROM nguoidung
 				WHERE mail = '$mail'
 				AND mat_khau = '$pass'
-				AND trang_thai = 0
+
 		";
 		return $this->getOneRow($sql);
 	}
@@ -188,6 +187,13 @@ class newsModel extends DBConnect{
 				LIMIT 0,20
 		";
 		return $this->getMoreRows($sql);
+	}
+	// hàm lưu
+	function setSave($idtt,$idu,$status){
+		$sql = "INSERT INTO saved(id_tintuc,id_nguoidung,status)
+				VALUES($idtt,$idu,$status) 				
+		";
+		return $this->executeQuery($sql);
 	}
 
 

@@ -31,16 +31,16 @@
           <li class="nav-item"><a class="sidebar-link" href="?com=kiemduyet&act=list"><span class="icon-holder"><i
                   class="c-deep-orange-500 fas fa-map-marked-alt"></i> </span><span class="title">Kiểm duyệt bài viết từ người dùng</span></a>
           </li>
-          <li class="nav-item"><a class="sidebar-link" href="#"><span class="icon-holder"><i
-                  class="c-deep-purple-500 fas fa-cogs"></i> </span><span class="title">Cấu hình C</span></a></li>
+          <li class="nav-item"><a class="sidebar-link" href="?com=user&act=list"><span class="icon-holder"><i
+                  class="c-deep-purple-500 fas fa-cogs"></i> </span><span class="title">Quản lý người dùng</span></a></li>
           <li class="nav-item"><a class="sidebar-link" href="#"><span class="icon-holder"><i
                   class="c-indigo-500 ti-email"></i> </span><span class="title">Cấu hình thông số E1</span></a></li>
           <li class="nav-item"><a class="sidebar-link" href="#"><span class="icon-holder"><i
                   class="c-light-blue-500 ti-email"></i> </span><span class="title">Thuê bao SIP</span></a></li>
           <li class="nav-item"><a class="sidebar-link" href="#"><span class="icon-holder"><i
-                  class="c-pink-500 fas fa-mobile-alt"></i> </span><span class="title">SCCP devices</span></a></li>
-          <li class="nav-item"><a class="sidebar-link" href="#"><span class="icon-holder"><i
-                  class="c-light-red-500 fas fa-chart-line"></i> </span><span class="title">SCCP lines</span></a></li>
+                  class="c-pink-500 fas fa-mobile-alt"></i> </span><span class="title">Thay đổi cấu hình web</span></a></li>
+          <li class="nav-item"><a class="sidebar-link" href="?com=caidat"><span class="icon-holder"><i
+                  class="c-light-red-500 fas fa-chart-line"></i> </span><span class="title">Cài đặt tài khoản</span></a></li>
           <!-- level -->
           <!-- <li class="nav-item dropdown">
                      <a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-orange-500 ti-layout-list-thumb"></i> </span><span class="title">Tables</span> <span class="arrow"><i class="ti-angle-right"></i></span></a>

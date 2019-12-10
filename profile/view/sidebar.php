@@ -22,13 +22,13 @@
 									<div class="word-link">
 										<h5>Nhật ký hoạt động</h5>
 										<a href="#">Bài đã comment</a>
-										<a href="#">Bài đã lưu</a>
+										<a href="?act=saved">Bài đã lưu</a>
 									</div>
 									<div class="skills">
 										<h5>Đăng bài</h5>
 										<a href="?act=dangbai">Đăng bài viết</a>
 										<a href="?act=baiduyet">Trạng thái bài viết</a>
-										<a href="#">Quà tặng</a>
+										<a href="?act=diemkok">Điểm koks</a>
 										<a href="?act=chinhsua">Cài đặt</a>
 									</div>
 								</div>

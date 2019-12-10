@@ -1,6 +1,16 @@
 <?php require_once "DBConnect.php"; 
 
 class adminModel extends DBConnect{
+	// Hàm đăng nhập
+	function login($txtname,$txtpass){
+		$sql = "SELECT * 
+				FROM nguoidung
+				WHERE mail = '$txtname'
+				AND mat_khau = '$txtpass'
+				AND trang_thai != 0
+		";
+		return $this->getOneRow($sql);
+	}
 	// Hàm lấy dữ liệu
 	function selectTable($tb){
 		$sql = "SELECT * 
@@ -105,6 +115,7 @@ class adminModel extends DBConnect{
 		";
 		return $this->getOneRow($sql);
 	}
+	
 	// Hàm thêm dữ liệu tags
 	function insertTags($ten_tags,$tags_ko){
 		$sql = "INSERT INTO tags(ten_tags,tags_ko)
@@ -113,7 +124,7 @@ class adminModel extends DBConnect{
 		";
 		return $this->executeQuery($sql);
 	}
-	// Hàm thê dữ liệu tags + tintuc
+	// Hàm thêm dữ liệu tags + tintuc
 	function insertTTTags($idTintuc,$idTags){
 		$sql = "INSERT INTO tintuc_tags(id_tags,id_tintuc)
 				VALUES ('$idTags','$idTintuc')
@@ -138,6 +149,17 @@ class adminModel extends DBConnect{
 				WHERE id = $id  
 
 		";	
+		return $this->executeQuery($sql);
+	}
+		// Hàm update người dùng
+	function updateUser($ten,$tenko,$mail,$sdt,$id){
+		$sql = "UPDATE nguoidung 
+				SET ten = '$ten',
+					ten_ko = '$tenko',
+					mail = '$mail',
+					sdt = '$sdt'
+				WHERE id = $id
+		";
 		return $this->executeQuery($sql);
 	}
 

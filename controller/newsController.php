@@ -1,7 +1,6 @@
 <?php 
 require_once "model/newsModel.php";
 
-
 class newsController{
 	//Xử lí trang index
 	public function index(){
@@ -52,14 +51,15 @@ class newsController{
 		$tags = $model->getTagsById($news->idtt);
 
 		// Tính lượt view
+
 		$ssname = 'Tintuc-'.$news->idtt;
 		$checkView = $_SESSION[$ssname];
+
 		if(!$checkView){
 			$_SESSION[$ssname] = 1;
 			$add = $news->luotxem + 1;
 			$addView = $model->addView($add,$news->idtt); // Tăng lượt view
 		}
-
 
 		return array(
 			'news' => $news,
